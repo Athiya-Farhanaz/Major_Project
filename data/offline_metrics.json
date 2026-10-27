@@ -1,0 +1,39 @@
+{
+    "isolation_forest": {
+        "accuracy": 0.5052702702702703,
+        "precision": 0.6054054054054054,
+        "recall": 0.03027027027027027,
+        "f1_score": 0.05765765765765766,
+        "roc_auc": 0.7120649379108838,
+        "train_time": 0.7328996658325195,
+        "threshold": 0.568014442356029,
+        "confusion_matrix": {
+            "tn": 7254,
+            "fp": 146,
+            "fn": 7176,
+            "tp": 224
+        }
+    },
+    "one_class_svm": {
+        "accuracy": 0.5205405405405406,
+        "precision": 0.7576271186440678,
+        "recall": 0.060405405405405406,
+        "f1_score": 0.11188986232790989,
+        "roc_auc": 0.6322376186997808,
+        "train_time": 0.2773873805999756,
+        "threshold": -13.70608105663752
+    },
+    "attack_categories": {
+        "Normal": 7400,
+        "Generic": 3079,
+        "Exploits": 1803,
+        "Fuzzers": 1014,
+        "DoS": 708,
+        "Reconnaissance": 544,
+        "Analysis": 107,
+        "Backdoor": 84,
+        "Shellcode": 55,
+        "Worms": 6
+    },
+    "evaluated_at": "2026-08-19 23:44:47"
+}
