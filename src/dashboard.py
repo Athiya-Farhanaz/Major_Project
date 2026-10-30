@@ -15,7 +15,8 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.config import (
     MODEL_PATH, PREPROCESSOR_PATH, BASELINE_TRAIN_SIZE,
-    SIMULATION_TICK_RATE, DRIFT_WINDOW_SIZE, DRIFT_ALPHA
+    SIMULATION_TICK_RATE, DRIFT_WINDOW_SIZE, DRIFT_ALPHA,
+    SHAP_BACKGROUND_SIZE
 )
 from src.data_generator import NetworkTrafficSimulator
 from src.preprocessor import NetworkPreprocessor
@@ -68,7 +69,7 @@ def retrain_model_on_drift():
     st.session_state.detector.fit(X_train_new)
     st.session_state.detector.save()
     
-    bg_samples = X_train_new[:min(len(X_train_new), 150)]
+    bg_samples = X_train_new[:min(len(X_train_new), SHAP_BACKGROUND_SIZE)]
     st.session_state.xai = NetworkXAI(
         st.session_state.detector,
         st.session_state.preprocessor,
@@ -105,7 +106,7 @@ if 'simulator' not in st.session_state:
     st.session_state.preprocessor = NetworkPreprocessor.load()
     st.session_state.detector = AnomalyDetector.load()
     
-    df_baseline = st.session_state.simulator.generate_baseline(150)
+    df_baseline = st.session_state.simulator.generate_baseline(SHAP_BACKGROUND_SIZE)
     X_bg = st.session_state.preprocessor.transform(df_baseline)
     st.session_state.xai = NetworkXAI(st.session_state.detector, st.session_state.preprocessor, X_bg)
     
@@ -704,7 +705,7 @@ with xai_placeholder.container():
         grouped_shap = explanation['grouped_shap_values']
         sorted_shap = sorted(grouped_shap.items(), key=lambda x: abs(x[1]), reverse=True)[:6]
         
-        base_val = 0.50
+        base_val = explanation.get('base_value', 0.50)
         waterfall_x = ["Baseline Normal"]
         waterfall_y = [base_val]
         waterfall_measures = ["absolute"]

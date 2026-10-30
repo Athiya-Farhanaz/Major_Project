@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import ks_2samp
 from typing import Dict, List, Tuple, Any
-from src.config import DRIFT_WINDOW_SIZE, DRIFT_ALPHA
+from src.config import DRIFT_WINDOW_SIZE, DRIFT_ALPHA, DRIFT_MIN_INTERVAL
 
 class ConceptDriftDetector:
     def __init__(self, reference_df: pd.DataFrame, window_size: int = DRIFT_WINDOW_SIZE, alpha: float = DRIFT_ALPHA):
@@ -27,6 +27,7 @@ class ConceptDriftDetector:
         self.window_buffer = {feat: [] for feat in self.features_to_monitor}
         self.records_processed = 0
         self.last_p_values = {feat: 1.0 for feat in self.features_to_monitor}
+        self.last_drift_record = -DRIFT_MIN_INTERVAL  # Allow immediate first detection
 
     def update(self, record: Dict[str, Any]) -> Tuple[bool, Dict[str, float]]:
         """
@@ -75,8 +76,10 @@ class ConceptDriftDetector:
                     significant_shifts += 1
             
             # Declare drift if at least one feature shows significant statistical shift
-            if significant_shifts >= 1:
+            # AND we haven't triggered drift too recently (anti-thrashing cooldown)
+            if significant_shifts >= 1 and (self.records_processed - self.last_drift_record) >= DRIFT_MIN_INTERVAL:
                 drift_detected = True
+                self.last_drift_record = self.records_processed
         else:
             # Return last computed p-values for continuity in UI
             p_values = self.last_p_values.copy()
@@ -93,6 +96,7 @@ class ConceptDriftDetector:
         # Clear current window to start fresh
         self.window_buffer = {feat: [] for feat in self.features_to_monitor}
         self.last_p_values = {feat: 1.0 for feat in self.features_to_monitor}
+        self.last_drift_record = self.records_processed  # Reset cooldown after retrain
 
 
 if __name__ == "__main__":
