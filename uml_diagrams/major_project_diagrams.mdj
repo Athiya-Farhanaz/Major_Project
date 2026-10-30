@@ -1,0 +1,245 @@
+{
+  "_type": "Project",
+  "_id": "363efb76a7334b8d81b601a1",
+  "name": "Autonomous Real-Time Network Anomaly Detection System",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "7d3a8557d40c435eb476dea9",
+      "_parent": {
+        "$ref": "363efb76a7334b8d81b601a1"
+      },
+      "name": "Major Project UML Model",
+      "ownedElements": [
+        {
+          "_type": "UMLUseCaseDiagram",
+          "_id": "a5d8638b07204129adccb5b8",
+          "_parent": {
+            "$ref": "7d3a8557d40c435eb476dea9"
+          },
+          "name": "Use Case Diagram",
+          "ownedViews": []
+        },
+        {
+          "_type": "UMLActivityDiagram",
+          "_id": "203ca1acb1c8458392d10e16",
+          "_parent": {
+            "$ref": "7d3a8557d40c435eb476dea9"
+          },
+          "name": "Activity Diagram",
+          "ownedViews": []
+        },
+        {
+          "_type": "UMLSequenceDiagram",
+          "_id": "ea33ebb585e44a6f8bd666c3",
+          "_parent": {
+            "$ref": "7d3a8557d40c435eb476dea9"
+          },
+          "name": "Sequence Diagram",
+          "ownedViews": []
+        },
+        {
+          "_type": "UMLCommunicationDiagram",
+          "_id": "12aec07aff324732973639aa",
+          "_parent": {
+            "$ref": "7d3a8557d40c435eb476dea9"
+          },
+          "name": "Collaboration Diagram",
+          "ownedViews": []
+        },
+        {
+          "_type": "UMLComponentDiagram",
+          "_id": "4f24bd0c8f15437e827d125e",
+          "_parent": {
+            "$ref": "7d3a8557d40c435eb476dea9"
+          },
+          "name": "Component Diagram",
+          "ownedViews": []
+        },
+        {
+          "_type": "UMLDeploymentDiagram",
+          "_id": "64566e5bc32445eca056fe84",
+          "_parent": {
+            "$ref": "7d3a8557d40c435eb476dea9"
+          },
+          "name": "Deployment Diagram",
+          "ownedViews": []
+        },
+        {
+          "_type": "UMLClassDiagram",
+          "_id": "69cf814bc27d4eb6aee228e6",
+          "_parent": {
+            "$ref": "7d3a8557d40c435eb476dea9"
+          },
+          "name": "System Architecture Diagram",
+          "ownedViews": []
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "180c69b736714842a8236e08",
+          "_parent": {
+            "$ref": "7d3a8557d40c435eb476dea9"
+          },
+          "name": "NetworkTrafficSimulator",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "3729f5d76b3446da97e6494a",
+              "name": "rng"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "7d4743be1c8d43908148d3ab",
+              "name": "drift_active"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "ef9bed25a88c4a4ba89c2238",
+              "name": "current_phase"
+            }
+          ],
+          "operations": [
+            {
+              "_type": "UMLOperation",
+              "_id": "757a2a53a9c74674974995e0",
+              "name": "generate_single_flow"
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "6491b9729e9f4a498a8b4b57",
+              "name": "set_drift"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "59bb9bbc127a46328041bb92",
+          "_parent": {
+            "$ref": "7d3a8557d40c435eb476dea9"
+          },
+          "name": "NetworkPreprocessor",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "1d20d01e98304af99a666383",
+              "name": "preprocessor"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "b462673f78e54550ba0c9f0a",
+              "name": "feature_names"
+            }
+          ],
+          "operations": [
+            {
+              "_type": "UMLOperation",
+              "_id": "745009c3e415497986a22553",
+              "name": "fit"
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "866f07385eed48d397e33ad7",
+              "name": "transform"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "cdceb7d722d6400ab5c76a6f",
+          "_parent": {
+            "$ref": "7d3a8557d40c435eb476dea9"
+          },
+          "name": "AnomalyDetector",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "1cf0638e7d0e433bbc336d1e",
+              "name": "model: IsolationForest"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "4a2eb6fa8ab6415ebe307fa5",
+              "name": "threshold: float"
+            }
+          ],
+          "operations": [
+            {
+              "_type": "UMLOperation",
+              "_id": "56bcefa4751b4fa2bfb03141",
+              "name": "fit"
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "a8579bf95710446d92fc30f8",
+              "name": "predict"
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "ca315f62c9e54b0781dba648",
+              "name": "get_anomaly_score"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "48cb1e15a02747158ad30b91",
+          "_parent": {
+            "$ref": "7d3a8557d40c435eb476dea9"
+          },
+          "name": "NetworkXAI",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "2b4577be1f2a4440bd7d8dcd",
+              "name": "explainer: TreeExplainer"
+            }
+          ],
+          "operations": [
+            {
+              "_type": "UMLOperation",
+              "_id": "027ecab6d9914a5d95b71c8c",
+              "name": "explain_instance"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "133b65f2f448472887091af0",
+          "_parent": {
+            "$ref": "7d3a8557d40c435eb476dea9"
+          },
+          "name": "ConceptDriftDetector",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "5cae645872b646fabfe2b6b3",
+              "name": "window_size: int"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "96835eb30d5f45449499047f",
+              "name": "alpha: float"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "5acbb513bf6a4b9491f58fcc",
+              "name": "last_drift_record: int"
+            }
+          ],
+          "operations": [
+            {
+              "_type": "UMLOperation",
+              "_id": "234f2163921c4dfab8fb1360",
+              "name": "update"
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "e7e956a887d34f538decc071",
+              "name": "reset_reference"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
