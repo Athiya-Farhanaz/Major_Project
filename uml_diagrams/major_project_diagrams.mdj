@@ -1,1067 +1,1603 @@
 {
   "_type": "Project",
-  "_id": "78fd634081c84eecb14e0097",
+  "_id": "014c1d1303f1443baa24cc0e",
   "name": "Autonomous Real-Time Network Anomaly Detection System",
   "ownedElements": [
     {
       "_type": "UMLModel",
-      "_id": "a1fc3383ec34470cab9c26f8",
+      "_id": "7c82d8b275714022a4ae2677",
       "_parent": {
-        "$ref": "78fd634081c84eecb14e0097"
+        "$ref": "014c1d1303f1443baa24cc0e"
       },
       "name": "Major Project UML Model",
       "ownedElements": [
         {
           "_type": "UMLUseCaseDiagram",
-          "_id": "2a5c0d9d521144d491c81324",
+          "_id": "0ceca7cc2e1b48a5bddf6798",
           "_parent": {
-            "$ref": "a1fc3383ec34470cab9c26f8"
+            "$ref": "7c82d8b275714022a4ae2677"
           },
           "name": "Use Case Diagram",
           "ownedViews": [
             {
-              "_type": "UMLActorView",
-              "_id": "c556bbf7b9d24c75a994f692",
+              "_type": "UMLUseCaseSubjectView",
+              "_id": "48240b89076c4f5a87c1aaab",
               "_parent": {
-                "$ref": "2a5c0d9d521144d491c81324"
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
               },
-              "model": {
-                "$ref": "fe67ac4436c64facb06fcdc1"
-              },
-              "font": "Arial;13;0",
-              "left": 80,
-              "top": 240,
-              "width": 60,
-              "height": 85,
+              "font": "Arial;13;1",
+              "left": 180,
+              "top": 30,
+              "width": 840,
+              "height": 720,
+              "name": "Autonomous Real-Time Network Anomaly Detection System",
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFFF",
               "nameCompartment": {
                 "_type": "UMLNameCompartmentView",
-                "_id": "1385ba5981a142269fb246b7",
+                "_id": "d69e1dd41f5f4552815ae1fe",
                 "_parent": {
-                  "$ref": "c556bbf7b9d24c75a994f692"
+                  "$ref": "48240b89076c4f5a87c1aaab"
                 },
-                "model": {
-                  "$ref": "fe67ac4436c64facb06fcdc1"
-                },
-                "font": "Arial;13;0",
-                "left": 55,
-                "top": 330,
-                "width": 110,
-                "height": 26,
-                "text": "Security Analyst\n(Operator)"
+                "font": "Arial;14;1",
+                "left": 360,
+                "top": 40,
+                "width": 480,
+                "height": 20,
+                "text": "Autonomous Real-Time Network Anomaly Detection System",
+                "fontColor": "#000000"
               }
             },
             {
               "_type": "UMLActorView",
-              "_id": "b7b95dcd7cc54b549899f594",
+              "_id": "6b269756a6194982b518a9f4",
               "_parent": {
-                "$ref": "2a5c0d9d521144d491c81324"
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
               },
               "model": {
-                "$ref": "7404c83d6611455f899c1de2"
-              },
-              "font": "Arial;13;0",
-              "left": 760,
-              "top": 240,
-              "width": 60,
-              "height": 85,
-              "nameCompartment": {
-                "_type": "UMLNameCompartmentView",
-                "_id": "bd8286a230a049539fb9951b",
-                "_parent": {
-                  "$ref": "b7b95dcd7cc54b549899f594"
-                },
-                "model": {
-                  "$ref": "7404c83d6611455f899c1de2"
-                },
-                "font": "Arial;13;0",
-                "left": 735,
-                "top": 330,
-                "width": 110,
-                "height": 26,
-                "text": "Network Gateway\n(Traffic Stream)"
-              }
-            },
-            {
-              "_type": "UMLUseCaseView",
-              "_id": "262d0d8733724a96bab5b370",
-              "_parent": {
-                "$ref": "2a5c0d9d521144d491c81324"
-              },
-              "model": {
-                "$ref": "dffb151063904f0e9094c534"
-              },
-              "font": "Arial;13;0",
-              "left": 320,
-              "top": 60,
-              "width": 260,
-              "height": 65,
-              "nameCompartment": {
-                "_type": "UMLNameCompartmentView",
-                "_id": "da8a4b64e7994c2bac13859a",
-                "_parent": {
-                  "$ref": "262d0d8733724a96bab5b370"
-                },
-                "model": {
-                  "$ref": "dffb151063904f0e9094c534"
-                },
-                "font": "Arial;13;0",
-                "left": 330,
-                "top": 75,
-                "width": 240,
-                "height": 26,
-                "text": "UC1: Ingest Streaming NetFlow Packets"
-              }
-            },
-            {
-              "_type": "UMLUseCaseView",
-              "_id": "e7684bb8263d4dbab16b9e74",
-              "_parent": {
-                "$ref": "2a5c0d9d521144d491c81324"
-              },
-              "model": {
-                "$ref": "8ed5dbb057014a2caf3f32ee"
-              },
-              "font": "Arial;13;0",
-              "left": 320,
-              "top": 150,
-              "width": 260,
-              "height": 65,
-              "nameCompartment": {
-                "_type": "UMLNameCompartmentView",
-                "_id": "5557940c0a7e4147b4740c82",
-                "_parent": {
-                  "$ref": "e7684bb8263d4dbab16b9e74"
-                },
-                "model": {
-                  "$ref": "8ed5dbb057014a2caf3f32ee"
-                },
-                "font": "Arial;13;0",
-                "left": 330,
-                "top": 165,
-                "width": 240,
-                "height": 26,
-                "text": "UC2: Preprocess Features (Scale & Encode)"
-              }
-            },
-            {
-              "_type": "UMLUseCaseView",
-              "_id": "cdd0a64720ee435c91d00643",
-              "_parent": {
-                "$ref": "2a5c0d9d521144d491c81324"
-              },
-              "model": {
-                "$ref": "3f5e24ff74494146ba210bab"
-              },
-              "font": "Arial;13;0",
-              "left": 320,
-              "top": 240,
-              "width": 260,
-              "height": 65,
-              "nameCompartment": {
-                "_type": "UMLNameCompartmentView",
-                "_id": "bbf3132a1a8a4680b1226b09",
-                "_parent": {
-                  "$ref": "cdd0a64720ee435c91d00643"
-                },
-                "model": {
-                  "$ref": "3f5e24ff74494146ba210bab"
-                },
-                "font": "Arial;13;0",
-                "left": 330,
-                "top": 255,
-                "width": 240,
-                "height": 26,
-                "text": "UC3: Detect Anomalies (Isolation Forest)"
-              }
-            },
-            {
-              "_type": "UMLUseCaseView",
-              "_id": "9b815fa8045c44caae73a4e2",
-              "_parent": {
-                "$ref": "2a5c0d9d521144d491c81324"
-              },
-              "model": {
-                "$ref": "2909266e90984f2ab23b7170"
-              },
-              "font": "Arial;13;0",
-              "left": 320,
-              "top": 330,
-              "width": 260,
-              "height": 65,
-              "nameCompartment": {
-                "_type": "UMLNameCompartmentView",
-                "_id": "42d5adaa4f154eec8d5604c2",
-                "_parent": {
-                  "$ref": "9b815fa8045c44caae73a4e2"
-                },
-                "model": {
-                  "$ref": "2909266e90984f2ab23b7170"
-                },
-                "font": "Arial;13;0",
-                "left": 330,
-                "top": 345,
-                "width": 240,
-                "height": 26,
-                "text": "UC4: Generate TreeSHAP Attribution"
-              }
-            },
-            {
-              "_type": "UMLUseCaseView",
-              "_id": "d64084ab1abb43eba2113087",
-              "_parent": {
-                "$ref": "2a5c0d9d521144d491c81324"
-              },
-              "model": {
-                "$ref": "a152bd90cf6e4c77b354eadb"
-              },
-              "font": "Arial;13;0",
-              "left": 320,
-              "top": 420,
-              "width": 260,
-              "height": 65,
-              "nameCompartment": {
-                "_type": "UMLNameCompartmentView",
-                "_id": "db59541444a341ffbff7ba27",
-                "_parent": {
-                  "$ref": "d64084ab1abb43eba2113087"
-                },
-                "model": {
-                  "$ref": "a152bd90cf6e4c77b354eadb"
-                },
-                "font": "Arial;13;0",
-                "left": 330,
-                "top": 435,
-                "width": 240,
-                "height": 26,
-                "text": "UC5: Monitor Concept Drift (KS-Test)"
-              }
-            },
-            {
-              "_type": "UMLUseCaseView",
-              "_id": "0637520a5d304d93b795d3a7",
-              "_parent": {
-                "$ref": "2a5c0d9d521144d491c81324"
-              },
-              "model": {
-                "$ref": "cdf5bcd78bbc4a2aad0c3d6f"
-              },
-              "font": "Arial;13;0",
-              "left": 320,
-              "top": 510,
-              "width": 260,
-              "height": 65,
-              "nameCompartment": {
-                "_type": "UMLNameCompartmentView",
-                "_id": "3f277fa7ad9d4bc99ba28c5a",
-                "_parent": {
-                  "$ref": "0637520a5d304d93b795d3a7"
-                },
-                "model": {
-                  "$ref": "cdf5bcd78bbc4a2aad0c3d6f"
-                },
-                "font": "Arial;13;0",
-                "left": 330,
-                "top": 525,
-                "width": 240,
-                "height": 26,
-                "text": "UC6: Retrain Model (Anti-Poison Filter)"
-              }
-            },
-            {
-              "_type": "UMLAssociationView",
-              "_id": "04a2cadab14043fd9ae9dbf8",
-              "_parent": {
-                "$ref": "2a5c0d9d521144d491c81324"
-              },
-              "font": "Arial;13;0",
-              "head": {
-                "$ref": "262d0d8733724a96bab5b370"
-              },
-              "tail": {
-                "$ref": "c556bbf7b9d24c75a994f692"
-              },
-              "lineStyle": 1,
-              "points": "140;280:320;90"
-            },
-            {
-              "_type": "UMLAssociationView",
-              "_id": "7682524b5cd14390b60df40f",
-              "_parent": {
-                "$ref": "2a5c0d9d521144d491c81324"
-              },
-              "font": "Arial;13;0",
-              "head": {
-                "$ref": "cdd0a64720ee435c91d00643"
-              },
-              "tail": {
-                "$ref": "c556bbf7b9d24c75a994f692"
-              },
-              "lineStyle": 1,
-              "points": "140;280:320;270"
-            },
-            {
-              "_type": "UMLAssociationView",
-              "_id": "e69b534e3e6f43df847ac292",
-              "_parent": {
-                "$ref": "2a5c0d9d521144d491c81324"
-              },
-              "font": "Arial;13;0",
-              "head": {
-                "$ref": "9b815fa8045c44caae73a4e2"
-              },
-              "tail": {
-                "$ref": "c556bbf7b9d24c75a994f692"
-              },
-              "lineStyle": 1,
-              "points": "140;280:320;360"
-            },
-            {
-              "_type": "UMLAssociationView",
-              "_id": "39b07e5c155e4102b3ab8552",
-              "_parent": {
-                "$ref": "2a5c0d9d521144d491c81324"
-              },
-              "font": "Arial;13;0",
-              "head": {
-                "$ref": "0637520a5d304d93b795d3a7"
-              },
-              "tail": {
-                "$ref": "c556bbf7b9d24c75a994f692"
-              },
-              "lineStyle": 1,
-              "points": "140;280:320;540"
-            },
-            {
-              "_type": "UMLAssociationView",
-              "_id": "ec1bb93eadb844bfb7ec1f0c",
-              "_parent": {
-                "$ref": "2a5c0d9d521144d491c81324"
-              },
-              "font": "Arial;13;0",
-              "head": {
-                "$ref": "262d0d8733724a96bab5b370"
-              },
-              "tail": {
-                "$ref": "b7b95dcd7cc54b549899f594"
-              },
-              "lineStyle": 1,
-              "points": "760;280:580;90"
-            },
-            {
-              "_type": "UMLAssociationView",
-              "_id": "bc6a3cbedbf34bcf9c2dc0b2",
-              "_parent": {
-                "$ref": "2a5c0d9d521144d491c81324"
-              },
-              "font": "Arial;13;0",
-              "head": {
-                "$ref": "d64084ab1abb43eba2113087"
-              },
-              "tail": {
-                "$ref": "b7b95dcd7cc54b549899f594"
-              },
-              "lineStyle": 1,
-              "points": "760;280:580;450"
-            }
-          ]
-        },
-        {
-          "_type": "UMLClassDiagram",
-          "_id": "1dcb4e6838454e5dbc9653e7",
-          "_parent": {
-            "$ref": "a1fc3383ec34470cab9c26f8"
-          },
-          "name": "System Architecture Diagram",
-          "ownedViews": [
-            {
-              "_type": "UMLClassView",
-              "_id": "c1808ceb2a70430da13816b3",
-              "_parent": {
-                "$ref": "1dcb4e6838454e5dbc9653e7"
-              },
-              "model": {
-                "$ref": "2b0661632fc044a6a2861912"
-              },
-              "font": "Arial;13;0",
-              "left": 50,
-              "top": 80,
-              "width": 240,
-              "height": 120,
-              "nameCompartment": {
-                "_type": "UMLNameCompartmentView",
-                "_id": "45d459aeb7024666a431c4ff",
-                "_parent": {
-                  "$ref": "c1808ceb2a70430da13816b3"
-                },
-                "model": {
-                  "$ref": "2b0661632fc044a6a2861912"
-                },
-                "font": "Arial;13;1",
-                "left": 55,
-                "top": 85,
-                "width": 230,
-                "height": 23,
-                "text": "NetworkTrafficSimulator"
-              }
-            },
-            {
-              "_type": "UMLClassView",
-              "_id": "d51f10465fda48928e844943",
-              "_parent": {
-                "$ref": "1dcb4e6838454e5dbc9653e7"
-              },
-              "model": {
-                "$ref": "49e6169c7f5e41978a756765"
-              },
-              "font": "Arial;13;0",
-              "left": 340,
-              "top": 80,
-              "width": 240,
-              "height": 120,
-              "nameCompartment": {
-                "_type": "UMLNameCompartmentView",
-                "_id": "427ffb4b96524e78b2e13f2a",
-                "_parent": {
-                  "$ref": "d51f10465fda48928e844943"
-                },
-                "model": {
-                  "$ref": "49e6169c7f5e41978a756765"
-                },
-                "font": "Arial;13;1",
-                "left": 345,
-                "top": 85,
-                "width": 230,
-                "height": 23,
-                "text": "NetworkPreprocessor"
-              }
-            },
-            {
-              "_type": "UMLClassView",
-              "_id": "ae36329712ad4cc4a99abf31",
-              "_parent": {
-                "$ref": "1dcb4e6838454e5dbc9653e7"
-              },
-              "model": {
-                "$ref": "b6a52b16f5c647f6a7ed314e"
-              },
-              "font": "Arial;13;0",
-              "left": 630,
-              "top": 80,
-              "width": 270,
-              "height": 140,
-              "nameCompartment": {
-                "_type": "UMLNameCompartmentView",
-                "_id": "4f6aacd95a9d4a9bab83e6ff",
-                "_parent": {
-                  "$ref": "ae36329712ad4cc4a99abf31"
-                },
-                "model": {
-                  "$ref": "b6a52b16f5c647f6a7ed314e"
-                },
-                "font": "Arial;13;1",
-                "left": 635,
-                "top": 85,
-                "width": 260,
-                "height": 23,
-                "text": "AnomalyDetector (IsolationForest)"
-              }
-            },
-            {
-              "_type": "UMLClassView",
-              "_id": "47afb5d6e6a9411d8409faa6",
-              "_parent": {
-                "$ref": "1dcb4e6838454e5dbc9653e7"
-              },
-              "model": {
-                "$ref": "81d345fa083443898881469d"
-              },
-              "font": "Arial;13;0",
-              "left": 340,
-              "top": 280,
-              "width": 240,
-              "height": 120,
-              "nameCompartment": {
-                "_type": "UMLNameCompartmentView",
-                "_id": "4b127b3fbb7640b9a259db8a",
-                "_parent": {
-                  "$ref": "47afb5d6e6a9411d8409faa6"
-                },
-                "model": {
-                  "$ref": "81d345fa083443898881469d"
-                },
-                "font": "Arial;13;1",
-                "left": 345,
-                "top": 285,
-                "width": 230,
-                "height": 23,
-                "text": "NetworkXAI (TreeSHAP)"
-              }
-            },
-            {
-              "_type": "UMLClassView",
-              "_id": "0808264026d04091a84989dc",
-              "_parent": {
-                "$ref": "1dcb4e6838454e5dbc9653e7"
-              },
-              "model": {
-                "$ref": "a8472004cdc14727bc6ce9ff"
-              },
-              "font": "Arial;13;0",
-              "left": 630,
-              "top": 280,
-              "width": 270,
-              "height": 140,
-              "nameCompartment": {
-                "_type": "UMLNameCompartmentView",
-                "_id": "364c9527aedd44178c86ac98",
-                "_parent": {
-                  "$ref": "0808264026d04091a84989dc"
-                },
-                "model": {
-                  "$ref": "a8472004cdc14727bc6ce9ff"
-                },
-                "font": "Arial;13;1",
-                "left": 635,
-                "top": 285,
-                "width": 260,
-                "height": 23,
-                "text": "ConceptDriftDetector (KS-Test)"
-              }
-            },
-            {
-              "_type": "UMLAssociationView",
-              "_id": "85ddae9bb1ff40e5b60d00e3",
-              "_parent": {
-                "$ref": "1dcb4e6838454e5dbc9653e7"
-              },
-              "font": "Arial;13;0",
-              "head": {
-                "$ref": "d51f10465fda48928e844943"
-              },
-              "tail": {
-                "$ref": "c1808ceb2a70430da13816b3"
-              },
-              "lineStyle": 1,
-              "points": "290;140:340;140"
-            },
-            {
-              "_type": "UMLAssociationView",
-              "_id": "95d002f7b8324f539b1ef940",
-              "_parent": {
-                "$ref": "1dcb4e6838454e5dbc9653e7"
-              },
-              "font": "Arial;13;0",
-              "head": {
-                "$ref": "ae36329712ad4cc4a99abf31"
-              },
-              "tail": {
-                "$ref": "d51f10465fda48928e844943"
-              },
-              "lineStyle": 1,
-              "points": "580;140:630;140"
-            },
-            {
-              "_type": "UMLAssociationView",
-              "_id": "784529de627f4464bd22a7b8",
-              "_parent": {
-                "$ref": "1dcb4e6838454e5dbc9653e7"
-              },
-              "font": "Arial;13;0",
-              "head": {
-                "$ref": "47afb5d6e6a9411d8409faa6"
-              },
-              "tail": {
-                "$ref": "ae36329712ad4cc4a99abf31"
-              },
-              "lineStyle": 1,
-              "points": "630;180:580;320"
-            },
-            {
-              "_type": "UMLAssociationView",
-              "_id": "c974900b97be41518e94f996",
-              "_parent": {
-                "$ref": "1dcb4e6838454e5dbc9653e7"
-              },
-              "font": "Arial;13;0",
-              "head": {
-                "$ref": "0808264026d04091a84989dc"
-              },
-              "tail": {
-                "$ref": "ae36329712ad4cc4a99abf31"
-              },
-              "lineStyle": 1,
-              "points": "765;220:765;280"
-            }
-          ]
-        },
-        {
-          "_type": "UMLComponentDiagram",
-          "_id": "e6a5440b977742c8b6f84f44",
-          "_parent": {
-            "$ref": "a1fc3383ec34470cab9c26f8"
-          },
-          "name": "Component Diagram",
-          "ownedViews": [
-            {
-              "_type": "UMLComponentView",
-              "_id": "89ce430c8f3749c38f354dff",
-              "_parent": {
-                "$ref": "e6a5440b977742c8b6f84f44"
-              },
-              "model": {
-                "$ref": "3ce42c8ba626469aaa5cea2a"
+                "$ref": "afc803d60ef44ac39cc8e267"
               },
               "font": "Arial;13;0",
               "left": 60,
-              "top": 100,
-              "width": 220,
-              "height": 90,
+              "top": 340,
+              "width": 60,
+              "height": 85,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
               "nameCompartment": {
                 "_type": "UMLNameCompartmentView",
-                "_id": "e8142edfc4074690b1f6b912",
+                "_id": "5fbf183add3149358b3beb65",
                 "_parent": {
-                  "$ref": "89ce430c8f3749c38f354dff"
+                  "$ref": "6b269756a6194982b518a9f4"
                 },
                 "model": {
-                  "$ref": "3ce42c8ba626469aaa5cea2a"
+                  "$ref": "afc803d60ef44ac39cc8e267"
                 },
-                "font": "Arial;13;1",
-                "left": 85,
-                "top": 115,
-                "width": 185,
-                "height": 23,
-                "text": "DataIngestionEngine"
+                "font": "Arial;12;1",
+                "left": 30,
+                "top": 430,
+                "width": 120,
+                "height": 24,
+                "text": "Security Analyst",
+                "lineColor": "#B81D24",
+                "fillColor": "#FFFFE0",
+                "fontColor": "#000000"
               }
             },
             {
-              "_type": "UMLComponentView",
-              "_id": "a328a1d3d3924385b6c65574",
+              "_type": "UMLActorView",
+              "_id": "9d5a963bda3149dfb30555db",
               "_parent": {
-                "$ref": "e6a5440b977742c8b6f84f44"
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
               },
               "model": {
-                "$ref": "ed8851b0b62343d695155fb6"
+                "$ref": "08df3631fad84c9d8ae152b7"
               },
               "font": "Arial;13;0",
-              "left": 350,
-              "top": 100,
-              "width": 220,
-              "height": 90,
+              "left": 1060,
+              "top": 120,
+              "width": 60,
+              "height": 85,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
               "nameCompartment": {
                 "_type": "UMLNameCompartmentView",
-                "_id": "41f679c293fc4e2399b64708",
+                "_id": "add5569830c8488eb4f50b1e",
                 "_parent": {
-                  "$ref": "a328a1d3d3924385b6c65574"
+                  "$ref": "9d5a963bda3149dfb30555db"
                 },
                 "model": {
-                  "$ref": "ed8851b0b62343d695155fb6"
+                  "$ref": "08df3631fad84c9d8ae152b7"
                 },
-                "font": "Arial;13;1",
-                "left": 375,
-                "top": 115,
-                "width": 185,
-                "height": 23,
-                "text": "AnomalyDetectionCore"
+                "font": "Arial;12;1",
+                "left": 1030,
+                "top": 210,
+                "width": 120,
+                "height": 24,
+                "text": "Security Admin",
+                "lineColor": "#B81D24",
+                "fillColor": "#FFFFE0",
+                "fontColor": "#000000"
               }
             },
             {
-              "_type": "UMLComponentView",
-              "_id": "65f1a846ed654b9dbcd7f49a",
+              "_type": "UMLActorView",
+              "_id": "ceee15b357fb43439ce11ef6",
               "_parent": {
-                "$ref": "e6a5440b977742c8b6f84f44"
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
               },
               "model": {
-                "$ref": "e449d5db296347a3a60488a5"
+                "$ref": "af40ba699d334873abf7ab1d"
               },
               "font": "Arial;13;0",
-              "left": 640,
-              "top": 100,
-              "width": 220,
-              "height": 90,
+              "left": 1060,
+              "top": 480,
+              "width": 60,
+              "height": 85,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
               "nameCompartment": {
                 "_type": "UMLNameCompartmentView",
-                "_id": "73e247fa478040aaa50b248b",
+                "_id": "7ebc7484a2064817a49d63b2",
                 "_parent": {
-                  "$ref": "65f1a846ed654b9dbcd7f49a"
+                  "$ref": "ceee15b357fb43439ce11ef6"
                 },
                 "model": {
-                  "$ref": "e449d5db296347a3a60488a5"
+                  "$ref": "af40ba699d334873abf7ab1d"
                 },
-                "font": "Arial;13;1",
-                "left": 665,
-                "top": 115,
-                "width": 185,
-                "height": 23,
-                "text": "TreeSHAPExplanationModule"
+                "font": "Arial;12;1",
+                "left": 1030,
+                "top": 570,
+                "width": 120,
+                "height": 24,
+                "text": "Network Gateway",
+                "lineColor": "#B81D24",
+                "fillColor": "#FFFFE0",
+                "fontColor": "#000000"
               }
             },
             {
-              "_type": "UMLComponentView",
-              "_id": "7f65c8581776448eb69342f0",
+              "_type": "UMLUseCaseView",
+              "_id": "3f72ed02650143d199b72594",
               "_parent": {
-                "$ref": "e6a5440b977742c8b6f84f44"
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
               },
               "model": {
-                "$ref": "7ce6b8a7040647e2b8995acc"
+                "$ref": "59c358c68edb4c818c340009"
               },
-              "font": "Arial;13;0",
-              "left": 350,
+              "font": "Arial;12;0",
+              "left": 210,
+              "top": 80,
+              "width": 200,
+              "height": 55,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "745a91c60c8d448e8e0f7d56",
+                "_parent": {
+                  "$ref": "3f72ed02650143d199b72594"
+                },
+                "model": {
+                  "$ref": "59c358c68edb4c818c340009"
+                },
+                "font": "Arial;11;0",
+                "left": 220,
+                "top": 95,
+                "width": 180,
+                "height": 24,
+                "text": "Start Live Traffic Stream",
+                "fontColor": "#000000"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "1d36b290f0404539bb5883ce",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "model": {
+                "$ref": "8384cd2cf61049debf7d9720"
+              },
+              "font": "Arial;12;0",
+              "left": 210,
+              "top": 180,
+              "width": 200,
+              "height": 55,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "67fe2f5b17424c5eb5ba8d14",
+                "_parent": {
+                  "$ref": "1d36b290f0404539bb5883ce"
+                },
+                "model": {
+                  "$ref": "8384cd2cf61049debf7d9720"
+                },
+                "font": "Arial;11;0",
+                "left": 220,
+                "top": 195,
+                "width": 180,
+                "height": 24,
+                "text": "Inject Threat Vectors",
+                "fontColor": "#000000"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "d82c359ac40a40798ee83807",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "model": {
+                "$ref": "a1d4e9d1f5d3441684f9829f"
+              },
+              "font": "Arial;12;0",
+              "left": 210,
+              "top": 290,
+              "width": 200,
+              "height": 55,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "dfd777202c5e4c838e471699",
+                "_parent": {
+                  "$ref": "d82c359ac40a40798ee83807"
+                },
+                "model": {
+                  "$ref": "a1d4e9d1f5d3441684f9829f"
+                },
+                "font": "Arial;11;0",
+                "left": 220,
+                "top": 305,
+                "width": 180,
+                "height": 24,
+                "text": "Inspect Anomaly Decisions",
+                "fontColor": "#000000"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "4aa2cf580de747a79c4b93b6",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "model": {
+                "$ref": "32df27a62b374ce1a8e8dbd7"
+              },
+              "font": "Arial;12;0",
+              "left": 210,
+              "top": 400,
+              "width": 200,
+              "height": 55,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "cad806b2df0241aab934c3f5",
+                "_parent": {
+                  "$ref": "4aa2cf580de747a79c4b93b6"
+                },
+                "model": {
+                  "$ref": "32df27a62b374ce1a8e8dbd7"
+                },
+                "font": "Arial;11;0",
+                "left": 220,
+                "top": 415,
+                "width": 180,
+                "height": 24,
+                "text": "Inspect XAI Insights",
+                "fontColor": "#000000"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "9f546181e9d1470da05829ef",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "model": {
+                "$ref": "a9b66ac43f6d44f3b708b507"
+              },
+              "font": "Arial;12;0",
+              "left": 210,
+              "top": 510,
+              "width": 200,
+              "height": 55,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "bac7dd9dd3604e35976fa951",
+                "_parent": {
+                  "$ref": "9f546181e9d1470da05829ef"
+                },
+                "model": {
+                  "$ref": "a9b66ac43f6d44f3b708b507"
+                },
+                "font": "Arial;11;0",
+                "left": 220,
+                "top": 525,
+                "width": 180,
+                "height": 24,
+                "text": "Monitor Concept Drift",
+                "fontColor": "#000000"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "81b7e19543a643f29ecc4904",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "model": {
+                "$ref": "4944104aba4048a3a1938dbf"
+              },
+              "font": "Arial;12;0",
+              "left": 210,
+              "top": 600,
+              "width": 200,
+              "height": 55,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "5068c8479e294e97a37d083b",
+                "_parent": {
+                  "$ref": "81b7e19543a643f29ecc4904"
+                },
+                "model": {
+                  "$ref": "4944104aba4048a3a1938dbf"
+                },
+                "font": "Arial;11;0",
+                "left": 220,
+                "top": 615,
+                "width": 180,
+                "height": 24,
+                "text": "Autonomous Retraining",
+                "fontColor": "#000000"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "eb8e86ba8cc84076a0a407ae",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "model": {
+                "$ref": "6201d5e05da8437e9c35adbf"
+              },
+              "font": "Arial;12;0",
+              "left": 210,
+              "top": 680,
+              "width": 200,
+              "height": 55,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "a28bfaaea729414889b9cb2a",
+                "_parent": {
+                  "$ref": "eb8e86ba8cc84076a0a407ae"
+                },
+                "model": {
+                  "$ref": "6201d5e05da8437e9c35adbf"
+                },
+                "font": "Arial;11;0",
+                "left": 220,
+                "top": 695,
+                "width": 180,
+                "height": 24,
+                "text": "Export Forensic Report",
+                "fontColor": "#000000"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "7d0402ee06cd4da69ffb2ca5",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "model": {
+                "$ref": "9fbe5e9d57bf4be786bea639"
+              },
+              "font": "Arial;12;0",
+              "left": 490,
+              "top": 80,
+              "width": 200,
+              "height": 55,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "66de2e1a66bc44fbb435483b",
+                "_parent": {
+                  "$ref": "7d0402ee06cd4da69ffb2ca5"
+                },
+                "model": {
+                  "$ref": "9fbe5e9d57bf4be786bea639"
+                },
+                "font": "Arial;11;0",
+                "left": 500,
+                "top": 95,
+                "width": 180,
+                "height": 24,
+                "text": "Authenticate User Session",
+                "fontColor": "#000000"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "b0cbaec114a444e68179ccf4",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "model": {
+                "$ref": "27401e2192884a5ab54bbf32"
+              },
+              "font": "Arial;12;0",
+              "left": 490,
+              "top": 180,
+              "width": 200,
+              "height": 55,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "84483b38b7a346d9bf8eea00",
+                "_parent": {
+                  "$ref": "b0cbaec114a444e68179ccf4"
+                },
+                "model": {
+                  "$ref": "27401e2192884a5ab54bbf32"
+                },
+                "font": "Arial;11;0",
+                "left": 500,
+                "top": 195,
+                "width": 180,
+                "height": 24,
+                "text": "Normalize 15 NetFlow Features",
+                "fontColor": "#000000"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "21815e69c2404e6687d7c630",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "model": {
+                "$ref": "6c3da09a0d774e0189d0b821"
+              },
+              "font": "Arial;12;0",
+              "left": 490,
+              "top": 290,
+              "width": 200,
+              "height": 55,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "bc335e8973714697b755a668",
+                "_parent": {
+                  "$ref": "21815e69c2404e6687d7c630"
+                },
+                "model": {
+                  "$ref": "6c3da09a0d774e0189d0b821"
+                },
+                "font": "Arial;11;0",
+                "left": 500,
+                "top": 305,
+                "width": 180,
+                "height": 24,
+                "text": "Evaluate Isolation Forest Score",
+                "fontColor": "#000000"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "074664548ae04eb7871ce773",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "model": {
+                "$ref": "489cc7eb264c44b1a76bbf41"
+              },
+              "font": "Arial;12;0",
+              "left": 490,
+              "top": 400,
+              "width": 200,
+              "height": 55,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "10ece691200b4175a4aee8f7",
+                "_parent": {
+                  "$ref": "074664548ae04eb7871ce773"
+                },
+                "model": {
+                  "$ref": "489cc7eb264c44b1a76bbf41"
+                },
+                "font": "Arial;11;0",
+                "left": 500,
+                "top": 415,
+                "width": 180,
+                "height": 24,
+                "text": "Compute TreeSHAP Attribution",
+                "fontColor": "#000000"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "d72032a20aa04fafbf2c6b85",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "model": {
+                "$ref": "ce97fe0012e74af294950749"
+              },
+              "font": "Arial;12;0",
+              "left": 490,
+              "top": 510,
+              "width": 200,
+              "height": 55,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "01616bf4b503485aa7f2cba7",
+                "_parent": {
+                  "$ref": "d72032a20aa04fafbf2c6b85"
+                },
+                "model": {
+                  "$ref": "ce97fe0012e74af294950749"
+                },
+                "font": "Arial;11;0",
+                "left": 500,
+                "top": 525,
+                "width": 180,
+                "height": 24,
+                "text": "Execute Rolling KS-Test (\u03b1=0.002)",
+                "fontColor": "#000000"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "0bc299d4df334e158ea5789b",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "model": {
+                "$ref": "15f0305814d940ab98487732"
+              },
+              "font": "Arial;12;0",
+              "left": 490,
+              "top": 600,
+              "width": 200,
+              "height": 55,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "0bc0b0f64ac64006914e9a0f",
+                "_parent": {
+                  "$ref": "0bc299d4df334e158ea5789b"
+                },
+                "model": {
+                  "$ref": "15f0305814d940ab98487732"
+                },
+                "font": "Arial;11;0",
+                "left": 500,
+                "top": 615,
+                "width": 180,
+                "height": 24,
+                "text": "Filter Buffer (pred_anomaly==0)",
+                "fontColor": "#000000"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "7985678fab0945fa832bb9c0",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "model": {
+                "$ref": "be80a4bfb8404983a03c1d74"
+              },
+              "font": "Arial;12;0",
+              "left": 490,
+              "top": 680,
+              "width": 200,
+              "height": 55,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "2d961a67523a4b7da901ece3",
+                "_parent": {
+                  "$ref": "7985678fab0945fa832bb9c0"
+                },
+                "model": {
+                  "$ref": "be80a4bfb8404983a03c1d74"
+                },
+                "font": "Arial;11;0",
+                "left": 500,
+                "top": 695,
+                "width": 180,
+                "height": 24,
+                "text": "View UNSW-NB15 Benchmark",
+                "fontColor": "#000000"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "1e56b39f0a054c79a4f01b25",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "model": {
+                "$ref": "e1c6380371224466bcb83c9b"
+              },
+              "font": "Arial;12;0",
+              "left": 770,
+              "top": 70,
+              "width": 190,
+              "height": 50,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "3f95ad2a264d4e8d85c7d64e",
+                "_parent": {
+                  "$ref": "1e56b39f0a054c79a4f01b25"
+                },
+                "model": {
+                  "$ref": "e1c6380371224466bcb83c9b"
+                },
+                "font": "Arial;11;0",
+                "left": 780,
+                "top": 85,
+                "width": 170,
+                "height": 24,
+                "text": "Manage User Accounts",
+                "fontColor": "#000000"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "e45f72016321434da7ba3c16",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "model": {
+                "$ref": "d6223b18edfc4d59831bde41"
+              },
+              "font": "Arial;12;0",
+              "left": 770,
+              "top": 130,
+              "width": 190,
+              "height": 50,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "eaf31124af9b4484b94f57f4",
+                "_parent": {
+                  "$ref": "e45f72016321434da7ba3c16"
+                },
+                "model": {
+                  "$ref": "d6223b18edfc4d59831bde41"
+                },
+                "font": "Arial;11;0",
+                "left": 780,
+                "top": 145,
+                "width": 170,
+                "height": 24,
+                "text": "Configure Sensitivity Slider",
+                "fontColor": "#000000"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "b4ce4a27ecd544778cda59bd",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "model": {
+                "$ref": "5a39e693bb534e42904fb147"
+              },
+              "font": "Arial;12;0",
+              "left": 770,
+              "top": 190,
+              "width": 190,
+              "height": 50,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "dd687cb2bcfe4f9d8b6777a4",
+                "_parent": {
+                  "$ref": "b4ce4a27ecd544778cda59bd"
+                },
+                "model": {
+                  "$ref": "5a39e693bb534e42904fb147"
+                },
+                "font": "Arial;11;0",
+                "left": 780,
+                "top": 205,
+                "width": 170,
+                "height": 24,
+                "text": "Audit System Health (psutil)",
+                "fontColor": "#000000"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "55fbc57bbee04261ba5b85ad",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "model": {
+                "$ref": "4a326a7f274844d5a43bfb45"
+              },
+              "font": "Arial;12;0",
+              "left": 770,
               "top": 260,
-              "width": 220,
-              "height": 90,
+              "width": 190,
+              "height": 50,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
               "nameCompartment": {
                 "_type": "UMLNameCompartmentView",
-                "_id": "664b8d9508a2458681d1082e",
+                "_id": "f31d338cba15471895a93a95",
                 "_parent": {
-                  "$ref": "7f65c8581776448eb69342f0"
+                  "$ref": "55fbc57bbee04261ba5b85ad"
                 },
                 "model": {
-                  "$ref": "7ce6b8a7040647e2b8995acc"
+                  "$ref": "4a326a7f274844d5a43bfb45"
                 },
-                "font": "Arial;13;1",
-                "left": 375,
+                "font": "Arial;11;0",
+                "left": 780,
                 "top": 275,
-                "width": 185,
-                "height": 23,
-                "text": "DriftAdaptationController"
+                "width": 170,
+                "height": 24,
+                "text": "Simulate SYN Flood Wave",
+                "fontColor": "#000000"
               }
             },
             {
-              "_type": "UMLAssociationView",
-              "_id": "fdef5706de9d4707a38d9bd5",
+              "_type": "UMLUseCaseView",
+              "_id": "bef3d52685da43399fc7cdbe",
               "_parent": {
-                "$ref": "e6a5440b977742c8b6f84f44"
-              },
-              "font": "Arial;13;0",
-              "head": {
-                "$ref": "a328a1d3d3924385b6c65574"
-              },
-              "tail": {
-                "$ref": "89ce430c8f3749c38f354dff"
-              },
-              "lineStyle": 1,
-              "points": "280;145:350;145"
-            },
-            {
-              "_type": "UMLAssociationView",
-              "_id": "3e0d48497bf0487ca5756c17",
-              "_parent": {
-                "$ref": "e6a5440b977742c8b6f84f44"
-              },
-              "font": "Arial;13;0",
-              "head": {
-                "$ref": "65f1a846ed654b9dbcd7f49a"
-              },
-              "tail": {
-                "$ref": "a328a1d3d3924385b6c65574"
-              },
-              "lineStyle": 1,
-              "points": "570;145:640;145"
-            },
-            {
-              "_type": "UMLAssociationView",
-              "_id": "48d673f8e32f4744be5ccca6",
-              "_parent": {
-                "$ref": "e6a5440b977742c8b6f84f44"
-              },
-              "font": "Arial;13;0",
-              "head": {
-                "$ref": "7f65c8581776448eb69342f0"
-              },
-              "tail": {
-                "$ref": "a328a1d3d3924385b6c65574"
-              },
-              "lineStyle": 1,
-              "points": "460;190:460;260"
-            }
-          ]
-        },
-        {
-          "_type": "UMLActivityDiagram",
-          "_id": "343e0c64ea8341d5b68e26f8",
-          "_parent": {
-            "$ref": "a1fc3383ec34470cab9c26f8"
-          },
-          "name": "Activity Diagram",
-          "ownedViews": [
-            {
-              "_type": "UMLActionView",
-              "_id": "35a6cc015077414990f58832",
-              "_parent": {
-                "$ref": "343e0c64ea8341d5b68e26f8"
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
               },
               "model": {
-                "$ref": "344817524ffc449eab4aca29"
+                "$ref": "5cb1dbbf0b1b4f52919b3a9e"
               },
-              "font": "Arial;13;0",
-              "left": 320,
-              "top": 50,
-              "width": 230,
-              "height": 55,
+              "font": "Arial;12;0",
+              "left": 770,
+              "top": 320,
+              "width": 190,
+              "height": 50,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
               "nameCompartment": {
                 "_type": "UMLNameCompartmentView",
-                "_id": "f3653d8f850845bca9cbd5e1",
+                "_id": "1b38a723115748388408103b",
                 "_parent": {
-                  "$ref": "35a6cc015077414990f58832"
+                  "$ref": "bef3d52685da43399fc7cdbe"
                 },
                 "model": {
-                  "$ref": "344817524ffc449eab4aca29"
+                  "$ref": "5cb1dbbf0b1b4f52919b3a9e"
                 },
-                "font": "Arial;13;0",
-                "left": 330,
-                "top": 65,
-                "width": 210,
-                "height": 23,
-                "text": "Ingest & Normalize Packet"
+                "font": "Arial;11;0",
+                "left": 780,
+                "top": 335,
+                "width": 170,
+                "height": 24,
+                "text": "Simulate SSH Brute Force",
+                "fontColor": "#000000"
               }
             },
             {
-              "_type": "UMLActionView",
-              "_id": "34cb089acf4e48feaf4902fc",
+              "_type": "UMLUseCaseView",
+              "_id": "6440157b642f462ebe514eef",
               "_parent": {
-                "$ref": "343e0c64ea8341d5b68e26f8"
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
               },
               "model": {
-                "$ref": "555e9c705fbf4c24abef014c"
+                "$ref": "8cdd5baa931e43d38777ba96"
               },
-              "font": "Arial;13;0",
-              "left": 320,
-              "top": 150,
-              "width": 230,
-              "height": 55,
+              "font": "Arial;12;0",
+              "left": 770,
+              "top": 380,
+              "width": 190,
+              "height": 50,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
               "nameCompartment": {
                 "_type": "UMLNameCompartmentView",
-                "_id": "8ccf003c21cd4b53b4956f6a",
+                "_id": "b0e263cd5c644c648bc40511",
                 "_parent": {
-                  "$ref": "34cb089acf4e48feaf4902fc"
+                  "$ref": "6440157b642f462ebe514eef"
                 },
                 "model": {
-                  "$ref": "555e9c705fbf4c24abef014c"
+                  "$ref": "8cdd5baa931e43d38777ba96"
                 },
-                "font": "Arial;13;0",
-                "left": 330,
-                "top": 165,
-                "width": 210,
-                "height": 23,
-                "text": "Score with Isolation Forest"
+                "font": "Arial;11;0",
+                "left": 780,
+                "top": 395,
+                "width": 170,
+                "height": 24,
+                "text": "Simulate Data Exfiltration",
+                "fontColor": "#000000"
               }
             },
             {
-              "_type": "UMLActionView",
-              "_id": "0e4009f0fc9a4a688c93f545",
+              "_type": "UMLUseCaseView",
+              "_id": "4edf33ecdc414184921c219e",
               "_parent": {
-                "$ref": "343e0c64ea8341d5b68e26f8"
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
               },
               "model": {
-                "$ref": "42588940d43b4f15b289d52e"
+                "$ref": "9b0a6c47ebac4bbb9139c80b"
               },
-              "font": "Arial;13;0",
-              "left": 520,
-              "top": 260,
-              "width": 230,
-              "height": 55,
+              "font": "Arial;12;0",
+              "left": 770,
+              "top": 450,
+              "width": 190,
+              "height": 50,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
               "nameCompartment": {
                 "_type": "UMLNameCompartmentView",
-                "_id": "d66c7674924d420c81caa609",
+                "_id": "68a3e97a04a247219f4db76a",
                 "_parent": {
-                  "$ref": "0e4009f0fc9a4a688c93f545"
+                  "$ref": "4edf33ecdc414184921c219e"
                 },
                 "model": {
-                  "$ref": "42588940d43b4f15b289d52e"
+                  "$ref": "9b0a6c47ebac4bbb9139c80b"
                 },
-                "font": "Arial;13;0",
-                "left": 530,
-                "top": 275,
-                "width": 210,
-                "height": 23,
-                "text": "Generate SHAP Waterfall Plot"
+                "font": "Arial;11;0",
+                "left": 780,
+                "top": 465,
+                "width": 170,
+                "height": 24,
+                "text": "View SHAP Waterfall Chart",
+                "fontColor": "#000000"
               }
             },
             {
-              "_type": "UMLActionView",
-              "_id": "9f1c1a0b6d524698a728dc4d",
+              "_type": "UMLUseCaseView",
+              "_id": "b951815f331d4060b934b74a",
               "_parent": {
-                "$ref": "343e0c64ea8341d5b68e26f8"
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
               },
               "model": {
-                "$ref": "ea3d68d900ab4ed1a3f0bb7b"
+                "$ref": "38ea650673e542108e35dbc2"
               },
-              "font": "Arial;13;0",
-              "left": 120,
-              "top": 260,
-              "width": 230,
-              "height": 55,
+              "font": "Arial;12;0",
+              "left": 770,
+              "top": 510,
+              "width": 190,
+              "height": 50,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
               "nameCompartment": {
                 "_type": "UMLNameCompartmentView",
-                "_id": "a1e96cd658894d9aafcd274c",
+                "_id": "bc5084dc90934e0f8c3c4ea1",
                 "_parent": {
-                  "$ref": "9f1c1a0b6d524698a728dc4d"
+                  "$ref": "b951815f331d4060b934b74a"
                 },
                 "model": {
-                  "$ref": "ea3d68d900ab4ed1a3f0bb7b"
+                  "$ref": "38ea650673e542108e35dbc2"
                 },
-                "font": "Arial;13;0",
-                "left": 130,
-                "top": 275,
-                "width": 210,
-                "height": 23,
-                "text": "Update FIFO Drift Buffer (KS-Test)"
+                "font": "Arial;11;0",
+                "left": 780,
+                "top": 525,
+                "width": 170,
+                "height": 24,
+                "text": "View Plain-English Diagnosis",
+                "fontColor": "#000000"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "0aecb2965aa0485f82aa4e2a",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "model": {
+                "$ref": "b025e631c957461487340f88"
+              },
+              "font": "Arial;12;0",
+              "left": 770,
+              "top": 570,
+              "width": 190,
+              "height": 50,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "2c4a4b4b94c44f4d88913771",
+                "_parent": {
+                  "$ref": "0aecb2965aa0485f82aa4e2a"
+                },
+                "model": {
+                  "$ref": "b025e631c957461487340f88"
+                },
+                "font": "Arial;11;0",
+                "left": 780,
+                "top": 585,
+                "width": 170,
+                "height": 24,
+                "text": "Inspect Raw Flow JSON",
+                "fontColor": "#000000"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "61727bdd9e7e457c934f0c96",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "model": {
+                "$ref": "d94c19eacbd04b369eb45eec"
+              },
+              "font": "Arial;12;0",
+              "left": 770,
+              "top": 640,
+              "width": 190,
+              "height": 50,
+              "lineColor": "#B81D24",
+              "fillColor": "#FFFFE0",
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "7c603322663d4a3bbf0236ea",
+                "_parent": {
+                  "$ref": "61727bdd9e7e457c934f0c96"
+                },
+                "model": {
+                  "$ref": "d94c19eacbd04b369eb45eec"
+                },
+                "font": "Arial;11;0",
+                "left": 780,
+                "top": 655,
+                "width": 170,
+                "height": 24,
+                "text": "Track Log-Scale p-Values",
+                "fontColor": "#000000"
               }
             },
             {
               "_type": "UMLAssociationView",
-              "_id": "fa6d0ba11e97444680cbf2fe",
+              "_id": "9b5743b2bc794b5ab78a5136",
               "_parent": {
-                "$ref": "343e0c64ea8341d5b68e26f8"
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
               },
               "font": "Arial;13;0",
               "head": {
-                "$ref": "34cb089acf4e48feaf4902fc"
+                "$ref": "3f72ed02650143d199b72594"
               },
               "tail": {
-                "$ref": "35a6cc015077414990f58832"
+                "$ref": "6b269756a6194982b518a9f4"
               },
               "lineStyle": 1,
-              "points": "435;105:435;150"
+              "lineColor": "#B81D24",
+              "points": "120;380:210;110"
             },
             {
               "_type": "UMLAssociationView",
-              "_id": "27833739b9644f26beebd655",
+              "_id": "0b1dafe9915a4293870fbe38",
               "_parent": {
-                "$ref": "343e0c64ea8341d5b68e26f8"
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
               },
               "font": "Arial;13;0",
               "head": {
-                "$ref": "0e4009f0fc9a4a688c93f545"
+                "$ref": "1d36b290f0404539bb5883ce"
               },
               "tail": {
-                "$ref": "34cb089acf4e48feaf4902fc"
+                "$ref": "6b269756a6194982b518a9f4"
               },
               "lineStyle": 1,
-              "points": "470;205:550;260"
+              "lineColor": "#B81D24",
+              "points": "120;380:210;210"
             },
             {
               "_type": "UMLAssociationView",
-              "_id": "8f825f71d2094be0823cdf90",
+              "_id": "8a0e697b154741e6948f0ebc",
               "_parent": {
-                "$ref": "343e0c64ea8341d5b68e26f8"
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
               },
               "font": "Arial;13;0",
               "head": {
-                "$ref": "9f1c1a0b6d524698a728dc4d"
+                "$ref": "d82c359ac40a40798ee83807"
               },
               "tail": {
-                "$ref": "34cb089acf4e48feaf4902fc"
+                "$ref": "6b269756a6194982b518a9f4"
               },
               "lineStyle": 1,
-              "points": "400;205:280;260"
+              "lineColor": "#B81D24",
+              "points": "120;380:210;320"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "769eac365e8d401a88aadba9",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "4aa2cf580de747a79c4b93b6"
+              },
+              "tail": {
+                "$ref": "6b269756a6194982b518a9f4"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "120;380:210;430"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "cbe95997ec394d888afa276f",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "9f546181e9d1470da05829ef"
+              },
+              "tail": {
+                "$ref": "6b269756a6194982b518a9f4"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "120;380:210;540"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "af97a00b39db4d2eac9bd96a",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "81b7e19543a643f29ecc4904"
+              },
+              "tail": {
+                "$ref": "6b269756a6194982b518a9f4"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "120;380:210;630"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "e6fb67c8f10d4d1dbc9bd833",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "eb8e86ba8cc84076a0a407ae"
+              },
+              "tail": {
+                "$ref": "6b269756a6194982b518a9f4"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "120;380:210;700"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "505621e3416341839fff5771",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "7d0402ee06cd4da69ffb2ca5"
+              },
+              "tail": {
+                "$ref": "9d5a963bda3149dfb30555db"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "1060;160:690;105"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "ea40737af43b406c8e144210",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "1e56b39f0a054c79a4f01b25"
+              },
+              "tail": {
+                "$ref": "9d5a963bda3149dfb30555db"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "1060;160:960;95"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "2e66acbf778d4dcc86003ac8",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "e45f72016321434da7ba3c16"
+              },
+              "tail": {
+                "$ref": "9d5a963bda3149dfb30555db"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "1060;160:960;155"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "47cd3934062d4228b5339ab7",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "b4ce4a27ecd544778cda59bd"
+              },
+              "tail": {
+                "$ref": "9d5a963bda3149dfb30555db"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "1060;160:960;215"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "769e86cefcb8490a8d3bca7b",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "b0cbaec114a444e68179ccf4"
+              },
+              "tail": {
+                "$ref": "ceee15b357fb43439ce11ef6"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "1060;520:690;210"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "e815721581424108a90fcb9d",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "d72032a20aa04fafbf2c6b85"
+              },
+              "tail": {
+                "$ref": "ceee15b357fb43439ce11ef6"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "1060;520:690;535"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "882abe0eaa9c49ff98890024",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "0bc299d4df334e158ea5789b"
+              },
+              "tail": {
+                "$ref": "ceee15b357fb43439ce11ef6"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "1060;520:690;625"
+            },
+            {
+              "_type": "UMLDependencyView",
+              "_id": "602cb3f0808a4da7bd37fa5f",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;11;2",
+              "head": {
+                "$ref": "7d0402ee06cd4da69ffb2ca5"
+              },
+              "tail": {
+                "$ref": "3f72ed02650143d199b72594"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "410;105:490;105",
+              "name": "<<include>>"
+            },
+            {
+              "_type": "UMLDependencyView",
+              "_id": "7229d0e8334a428ca996fa37",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;11;2",
+              "head": {
+                "$ref": "b0cbaec114a444e68179ccf4"
+              },
+              "tail": {
+                "$ref": "1d36b290f0404539bb5883ce"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "410;205:490;205",
+              "name": "<<include>>"
+            },
+            {
+              "_type": "UMLDependencyView",
+              "_id": "de9f56782091485fad84c55a",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;11;2",
+              "head": {
+                "$ref": "21815e69c2404e6687d7c630"
+              },
+              "tail": {
+                "$ref": "d82c359ac40a40798ee83807"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "410;315:490;315",
+              "name": "<<include>>"
+            },
+            {
+              "_type": "UMLDependencyView",
+              "_id": "413bd81e76d8424d97fce8a2",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;11;2",
+              "head": {
+                "$ref": "074664548ae04eb7871ce773"
+              },
+              "tail": {
+                "$ref": "4aa2cf580de747a79c4b93b6"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "410;425:490;425",
+              "name": "<<include>>"
+            },
+            {
+              "_type": "UMLDependencyView",
+              "_id": "ff4da8874d954c1d82de0782",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;11;2",
+              "head": {
+                "$ref": "d72032a20aa04fafbf2c6b85"
+              },
+              "tail": {
+                "$ref": "9f546181e9d1470da05829ef"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "410;535:490;535",
+              "name": "<<include>>"
+            },
+            {
+              "_type": "UMLDependencyView",
+              "_id": "566d9b72bb684f6ba407e639",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;11;2",
+              "head": {
+                "$ref": "0bc299d4df334e158ea5789b"
+              },
+              "tail": {
+                "$ref": "81b7e19543a643f29ecc4904"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "410;625:490;625",
+              "name": "<<include>>"
+            },
+            {
+              "_type": "UMLDependencyView",
+              "_id": "48aff2273a7b4775b6091d84",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;11;2",
+              "head": {
+                "$ref": "7985678fab0945fa832bb9c0"
+              },
+              "tail": {
+                "$ref": "eb8e86ba8cc84076a0a407ae"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "410;705:490;705",
+              "name": "<<include>>"
+            },
+            {
+              "_type": "UMLDependencyView",
+              "_id": "8e015a26088d4360aac458de",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;11;2",
+              "head": {
+                "$ref": "55fbc57bbee04261ba5b85ad"
+              },
+              "tail": {
+                "$ref": "1d36b290f0404539bb5883ce"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "410;215:770;280",
+              "name": "<<extend>>"
+            },
+            {
+              "_type": "UMLDependencyView",
+              "_id": "85ab50931b9c4fbb8bc148b5",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;11;2",
+              "head": {
+                "$ref": "bef3d52685da43399fc7cdbe"
+              },
+              "tail": {
+                "$ref": "1d36b290f0404539bb5883ce"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "410;215:770;345",
+              "name": "<<extend>>"
+            },
+            {
+              "_type": "UMLDependencyView",
+              "_id": "4f5f052375954248855a7edd",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;11;2",
+              "head": {
+                "$ref": "6440157b642f462ebe514eef"
+              },
+              "tail": {
+                "$ref": "1d36b290f0404539bb5883ce"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "410;215:770;405",
+              "name": "<<extend>>"
+            },
+            {
+              "_type": "UMLDependencyView",
+              "_id": "f303c00628894451937f8cbc",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;11;2",
+              "head": {
+                "$ref": "4edf33ecdc414184921c219e"
+              },
+              "tail": {
+                "$ref": "074664548ae04eb7871ce773"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "690;425:770;470",
+              "name": "<<extend>>"
+            },
+            {
+              "_type": "UMLDependencyView",
+              "_id": "b9c62da339b342d5ae98bcf9",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;11;2",
+              "head": {
+                "$ref": "b951815f331d4060b934b74a"
+              },
+              "tail": {
+                "$ref": "074664548ae04eb7871ce773"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "690;425:770;535",
+              "name": "<<extend>>"
+            },
+            {
+              "_type": "UMLDependencyView",
+              "_id": "9b8c2aa797724953bf37ade8",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;11;2",
+              "head": {
+                "$ref": "0aecb2965aa0485f82aa4e2a"
+              },
+              "tail": {
+                "$ref": "074664548ae04eb7871ce773"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "690;425:770;595",
+              "name": "<<extend>>"
+            },
+            {
+              "_type": "UMLDependencyView",
+              "_id": "fd05b2a2a49e4f46a350d2a0",
+              "_parent": {
+                "$ref": "0ceca7cc2e1b48a5bddf6798"
+              },
+              "font": "Arial;11;2",
+              "head": {
+                "$ref": "61727bdd9e7e457c934f0c96"
+              },
+              "tail": {
+                "$ref": "d72032a20aa04fafbf2c6b85"
+              },
+              "lineStyle": 1,
+              "lineColor": "#B81D24",
+              "points": "690;545:770;660",
+              "name": "<<extend>>"
             }
           ]
         },
         {
           "_type": "UMLActor",
-          "_id": "fe67ac4436c64facb06fcdc1",
+          "_id": "afc803d60ef44ac39cc8e267",
           "name": "Security Analyst"
         },
         {
           "_type": "UMLActor",
-          "_id": "7404c83d6611455f899c1de2",
+          "_id": "08df3631fad84c9d8ae152b7",
+          "name": "Security Admin"
+        },
+        {
+          "_type": "UMLActor",
+          "_id": "af40ba699d334873abf7ab1d",
           "name": "Network Gateway"
         },
         {
           "_type": "UMLUseCase",
-          "_id": "dffb151063904f0e9094c534",
-          "name": "UC1: Ingest Streaming NetFlow Packets"
+          "_id": "59c358c68edb4c818c340009",
+          "name": "Start Live Traffic Stream"
         },
         {
           "_type": "UMLUseCase",
-          "_id": "8ed5dbb057014a2caf3f32ee",
-          "name": "UC2: Preprocess Features (Scale & Encode)"
+          "_id": "8384cd2cf61049debf7d9720",
+          "name": "Inject Threat Vectors"
         },
         {
           "_type": "UMLUseCase",
-          "_id": "3f5e24ff74494146ba210bab",
-          "name": "UC3: Detect Anomalies (Isolation Forest)"
+          "_id": "a1d4e9d1f5d3441684f9829f",
+          "name": "Inspect Anomaly Decisions"
         },
         {
           "_type": "UMLUseCase",
-          "_id": "2909266e90984f2ab23b7170",
-          "name": "UC4: Generate TreeSHAP Attribution"
+          "_id": "32df27a62b374ce1a8e8dbd7",
+          "name": "Inspect XAI Insights"
         },
         {
           "_type": "UMLUseCase",
-          "_id": "a152bd90cf6e4c77b354eadb",
-          "name": "UC5: Monitor Concept Drift (KS-Test)"
+          "_id": "a9b66ac43f6d44f3b708b507",
+          "name": "Monitor Concept Drift"
         },
         {
           "_type": "UMLUseCase",
-          "_id": "cdf5bcd78bbc4a2aad0c3d6f",
-          "name": "UC6: Retrain Model (Anti-Poison Filter)"
+          "_id": "4944104aba4048a3a1938dbf",
+          "name": "Autonomous Retraining"
         },
         {
-          "_type": "UMLClass",
-          "_id": "2b0661632fc044a6a2861912",
-          "name": "NetworkTrafficSimulator"
+          "_type": "UMLUseCase",
+          "_id": "6201d5e05da8437e9c35adbf",
+          "name": "Export Forensic Report"
         },
         {
-          "_type": "UMLClass",
-          "_id": "49e6169c7f5e41978a756765",
-          "name": "NetworkPreprocessor"
+          "_type": "UMLUseCase",
+          "_id": "9fbe5e9d57bf4be786bea639",
+          "name": "Authenticate User Session"
         },
         {
-          "_type": "UMLClass",
-          "_id": "b6a52b16f5c647f6a7ed314e",
-          "name": "AnomalyDetector"
+          "_type": "UMLUseCase",
+          "_id": "27401e2192884a5ab54bbf32",
+          "name": "Normalize 15 NetFlow Features"
         },
         {
-          "_type": "UMLClass",
-          "_id": "81d345fa083443898881469d",
-          "name": "NetworkXAI"
+          "_type": "UMLUseCase",
+          "_id": "6c3da09a0d774e0189d0b821",
+          "name": "Evaluate Isolation Forest Score"
         },
         {
-          "_type": "UMLClass",
-          "_id": "a8472004cdc14727bc6ce9ff",
-          "name": "ConceptDriftDetector"
+          "_type": "UMLUseCase",
+          "_id": "489cc7eb264c44b1a76bbf41",
+          "name": "Compute TreeSHAP Attribution"
         },
         {
-          "_type": "UMLComponent",
-          "_id": "3ce42c8ba626469aaa5cea2a",
-          "name": "DataIngestionEngine"
+          "_type": "UMLUseCase",
+          "_id": "ce97fe0012e74af294950749",
+          "name": "Execute Rolling KS-Test (\u03b1=0.002)"
         },
         {
-          "_type": "UMLComponent",
-          "_id": "ed8851b0b62343d695155fb6",
-          "name": "AnomalyDetectionCore"
+          "_type": "UMLUseCase",
+          "_id": "15f0305814d940ab98487732",
+          "name": "Filter Buffer (pred_anomaly==0)"
         },
         {
-          "_type": "UMLComponent",
-          "_id": "e449d5db296347a3a60488a5",
-          "name": "TreeSHAPExplanationModule"
+          "_type": "UMLUseCase",
+          "_id": "be80a4bfb8404983a03c1d74",
+          "name": "View UNSW-NB15 Benchmark"
         },
         {
-          "_type": "UMLComponent",
-          "_id": "7ce6b8a7040647e2b8995acc",
-          "name": "DriftAdaptationController"
+          "_type": "UMLUseCase",
+          "_id": "e1c6380371224466bcb83c9b",
+          "name": "Manage User Accounts"
         },
         {
-          "_type": "UMLAction",
-          "_id": "344817524ffc449eab4aca29",
-          "name": "Ingest & Normalize Packet"
+          "_type": "UMLUseCase",
+          "_id": "d6223b18edfc4d59831bde41",
+          "name": "Configure Sensitivity Slider"
         },
         {
-          "_type": "UMLAction",
-          "_id": "555e9c705fbf4c24abef014c",
-          "name": "Score with Isolation Forest"
+          "_type": "UMLUseCase",
+          "_id": "5a39e693bb534e42904fb147",
+          "name": "Audit System Health (psutil)"
         },
         {
-          "_type": "UMLAction",
-          "_id": "42588940d43b4f15b289d52e",
-          "name": "Generate SHAP Waterfall Plot"
+          "_type": "UMLUseCase",
+          "_id": "4a326a7f274844d5a43bfb45",
+          "name": "Simulate SYN Flood Wave"
         },
         {
-          "_type": "UMLAction",
-          "_id": "ea3d68d900ab4ed1a3f0bb7b",
-          "name": "Update FIFO Drift Buffer (KS-Test)"
+          "_type": "UMLUseCase",
+          "_id": "5cb1dbbf0b1b4f52919b3a9e",
+          "name": "Simulate SSH Brute Force"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "8cdd5baa931e43d38777ba96",
+          "name": "Simulate Data Exfiltration"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "9b0a6c47ebac4bbb9139c80b",
+          "name": "View SHAP Waterfall Chart"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "38ea650673e542108e35dbc2",
+          "name": "View Plain-English Diagnosis"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "b025e631c957461487340f88",
+          "name": "Inspect Raw Flow JSON"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "d94c19eacbd04b369eb45eec",
+          "name": "Track Log-Scale p-Values"
         }
       ]
     }
