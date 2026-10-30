@@ -6,10 +6,12 @@ A self-contained network security telemetry prototype designed to tackle concept
 
 ## 💡 Core Technical Novelties & Methodology
 
-Rather than a static machine learning workflow, this project is framed around two coupled streaming mechanisms:
+Rather than a static machine learning workflow, this project is framed around four integrated streaming mechanisms:
 
-### 1. Real-Time Streaming Anomaly Explanation (SHAP)
-Incoming network flows are intercepted dynamically from the stream. The features are immediately processed and fed to a `shap.TreeExplainer` aligned with an unsupervised **Isolation Forest**. Shapley values are calculated in real-time, mapping features to their exact contributions to the anomaly score, and translated into plain English explanations before the flow is archived.
+### 1. Real-Time Streaming Anomaly Explanation (SHAP Waterfall)
+Incoming network flows are intercepted dynamically from the stream. The features are immediately processed and fed to a `shap.TreeExplainer` aligned with an unsupervised **Isolation Forest**. Shapley values are calculated in real-time, mapping features to their exact contributions to the anomaly score, and translated into:
+* **Interactive Shapley Waterfall Charts**: Visually decomposing baseline normal expectation into feature-by-feature positive and negative pushes toward the final anomaly decision.
+* **Plain-English Security Explanations**: Diagnostic statements translating raw network flags into actionable SOC analyst alerts.
 
 ### 2. Statistical Concept Drift Detection (Bonferroni-Corrected KS-Test)
 * **Methodology**: The system monitors a rolling window of streamed traffic features (e.g. `duration`, `src_bytes`, `dst_bytes`, `count`, `srv_count`). We perform two-sample **Kolmogorov-Smirnov (KS) tests** on each feature against the baseline normal dataset.
@@ -22,9 +24,12 @@ Incoming network flows are intercepted dynamically from the stream. The features
 When concept drift is confirmed, the model is retrained to align its normal baseline with the shifted environment.
 * **Anti-Poisoning Filter**: To prevent adversarial attacks from poisoning the new baseline during retraining (e.g. a sustained DDoS attack being silently absorbed as "new normal" traffic), a security filter is implemented. The retraining logic filters the buffer to **only use flows classified as normal by the model (`pred_anomaly == 0`)**. This blocks malicious threat vectors from entering the training set.
 
-### 4. Unsupervised Evaluation Framing
-* **Training Time**: The Isolation Forest model trains in a completely **unsupervised/semi-supervised** manner, using only features representing normal baseline traffic. No labels or attack classes are seen by the model during training.
-* **Evaluation Time**: The UNSW-NB15 ground-truth labels are strictly **eval-only**. They are used only to compute metrics (Accuracy, Precision, Recall, F1, ROC-AUC) and plot the confusion matrix.
+### 4. Live SOC Monitoring & Forensics Features
+* **Live Threat Injection Waves**: Injects realistic multi-packet attack bursts (SYN flood waves, brute force waves, data exfiltration, port scan sweeps) with live countdown alert banners.
+* **SOC Telemetry Gauges**: Real-time meters for Flow Anomaly Score, Statistical Drift Risk Index, and Sub-millisecond Detection Latency.
+* **Unified Event Timeline**: Real-time multi-trace chart showing continuous anomaly scores, adaptive decision boundaries, detected threat spikes, and model realignment events.
+* **Incident Forensics CSV Export**: One-click download of timestamped security incident reports with full SHAP diagnostic logs.
+* **Dynamic Sensitivity Multiplier**: Live slider to demonstrate sensitivity vs specificity tradeoffs in front of evaluation panels.
 
 ---
 

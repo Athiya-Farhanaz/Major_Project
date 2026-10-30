@@ -106,11 +106,20 @@ class NetworkXAI:
         else:
             explanation_text = "The flow was flagged as anomalous, but feature contributions are evenly distributed."
 
+        # Store expected value if available
+        base_val = 0.50
+        try:
+            if hasattr(self.explainer, 'expected_value') and self.explainer.expected_value is not None:
+                base_val = float(np.ravel(self.explainer.expected_value)[0])
+        except Exception:
+            pass
+
         return {
             "shap_values": contributions_dict,
             "grouped_shap_values": grouped_contributions,
             "top_contributors": top_contributors,
-            "explanation_text": explanation_text
+            "explanation_text": explanation_text,
+            "base_value": base_val
         }
 
     def _group_categorical_contributions(self, contributions: Dict[str, float]) -> Dict[str, float]:

@@ -51,8 +51,14 @@ def run_streamlit():
         sys.exit(1)
         
     print(f"Starting Streamlit dashboard at {dashboard_path}...")
+    # Add project root to environment PYTHONPATH
+    env = os.environ.copy()
+    project_root = os.path.dirname(os.path.abspath(__file__))
+    existing_pp = env.get("PYTHONPATH", "")
+    env["PYTHONPATH"] = f"{project_root}{os.pathsep}{existing_pp}" if existing_pp else project_root
+    
     try:
-        subprocess.run(["streamlit", "run", dashboard_path], shell=True)
+        subprocess.run([sys.executable, "-m", "streamlit", "run", dashboard_path], env=env)
     except KeyboardInterrupt:
         print("\nStopping Streamlit dashboard...")
     except Exception as e:
