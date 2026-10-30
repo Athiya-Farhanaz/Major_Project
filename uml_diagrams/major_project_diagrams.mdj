@@ -1,243 +1,1067 @@
 {
   "_type": "Project",
-  "_id": "363efb76a7334b8d81b601a1",
+  "_id": "78fd634081c84eecb14e0097",
   "name": "Autonomous Real-Time Network Anomaly Detection System",
   "ownedElements": [
     {
       "_type": "UMLModel",
-      "_id": "7d3a8557d40c435eb476dea9",
+      "_id": "a1fc3383ec34470cab9c26f8",
       "_parent": {
-        "$ref": "363efb76a7334b8d81b601a1"
+        "$ref": "78fd634081c84eecb14e0097"
       },
       "name": "Major Project UML Model",
       "ownedElements": [
         {
           "_type": "UMLUseCaseDiagram",
-          "_id": "a5d8638b07204129adccb5b8",
+          "_id": "2a5c0d9d521144d491c81324",
           "_parent": {
-            "$ref": "7d3a8557d40c435eb476dea9"
+            "$ref": "a1fc3383ec34470cab9c26f8"
           },
           "name": "Use Case Diagram",
-          "ownedViews": []
-        },
-        {
-          "_type": "UMLActivityDiagram",
-          "_id": "203ca1acb1c8458392d10e16",
-          "_parent": {
-            "$ref": "7d3a8557d40c435eb476dea9"
-          },
-          "name": "Activity Diagram",
-          "ownedViews": []
-        },
-        {
-          "_type": "UMLSequenceDiagram",
-          "_id": "ea33ebb585e44a6f8bd666c3",
-          "_parent": {
-            "$ref": "7d3a8557d40c435eb476dea9"
-          },
-          "name": "Sequence Diagram",
-          "ownedViews": []
-        },
-        {
-          "_type": "UMLCommunicationDiagram",
-          "_id": "12aec07aff324732973639aa",
-          "_parent": {
-            "$ref": "7d3a8557d40c435eb476dea9"
-          },
-          "name": "Collaboration Diagram",
-          "ownedViews": []
-        },
-        {
-          "_type": "UMLComponentDiagram",
-          "_id": "4f24bd0c8f15437e827d125e",
-          "_parent": {
-            "$ref": "7d3a8557d40c435eb476dea9"
-          },
-          "name": "Component Diagram",
-          "ownedViews": []
-        },
-        {
-          "_type": "UMLDeploymentDiagram",
-          "_id": "64566e5bc32445eca056fe84",
-          "_parent": {
-            "$ref": "7d3a8557d40c435eb476dea9"
-          },
-          "name": "Deployment Diagram",
-          "ownedViews": []
+          "ownedViews": [
+            {
+              "_type": "UMLActorView",
+              "_id": "c556bbf7b9d24c75a994f692",
+              "_parent": {
+                "$ref": "2a5c0d9d521144d491c81324"
+              },
+              "model": {
+                "$ref": "fe67ac4436c64facb06fcdc1"
+              },
+              "font": "Arial;13;0",
+              "left": 80,
+              "top": 240,
+              "width": 60,
+              "height": 85,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "1385ba5981a142269fb246b7",
+                "_parent": {
+                  "$ref": "c556bbf7b9d24c75a994f692"
+                },
+                "model": {
+                  "$ref": "fe67ac4436c64facb06fcdc1"
+                },
+                "font": "Arial;13;0",
+                "left": 55,
+                "top": 330,
+                "width": 110,
+                "height": 26,
+                "text": "Security Analyst\n(Operator)"
+              }
+            },
+            {
+              "_type": "UMLActorView",
+              "_id": "b7b95dcd7cc54b549899f594",
+              "_parent": {
+                "$ref": "2a5c0d9d521144d491c81324"
+              },
+              "model": {
+                "$ref": "7404c83d6611455f899c1de2"
+              },
+              "font": "Arial;13;0",
+              "left": 760,
+              "top": 240,
+              "width": 60,
+              "height": 85,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "bd8286a230a049539fb9951b",
+                "_parent": {
+                  "$ref": "b7b95dcd7cc54b549899f594"
+                },
+                "model": {
+                  "$ref": "7404c83d6611455f899c1de2"
+                },
+                "font": "Arial;13;0",
+                "left": 735,
+                "top": 330,
+                "width": 110,
+                "height": 26,
+                "text": "Network Gateway\n(Traffic Stream)"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "262d0d8733724a96bab5b370",
+              "_parent": {
+                "$ref": "2a5c0d9d521144d491c81324"
+              },
+              "model": {
+                "$ref": "dffb151063904f0e9094c534"
+              },
+              "font": "Arial;13;0",
+              "left": 320,
+              "top": 60,
+              "width": 260,
+              "height": 65,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "da8a4b64e7994c2bac13859a",
+                "_parent": {
+                  "$ref": "262d0d8733724a96bab5b370"
+                },
+                "model": {
+                  "$ref": "dffb151063904f0e9094c534"
+                },
+                "font": "Arial;13;0",
+                "left": 330,
+                "top": 75,
+                "width": 240,
+                "height": 26,
+                "text": "UC1: Ingest Streaming NetFlow Packets"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "e7684bb8263d4dbab16b9e74",
+              "_parent": {
+                "$ref": "2a5c0d9d521144d491c81324"
+              },
+              "model": {
+                "$ref": "8ed5dbb057014a2caf3f32ee"
+              },
+              "font": "Arial;13;0",
+              "left": 320,
+              "top": 150,
+              "width": 260,
+              "height": 65,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "5557940c0a7e4147b4740c82",
+                "_parent": {
+                  "$ref": "e7684bb8263d4dbab16b9e74"
+                },
+                "model": {
+                  "$ref": "8ed5dbb057014a2caf3f32ee"
+                },
+                "font": "Arial;13;0",
+                "left": 330,
+                "top": 165,
+                "width": 240,
+                "height": 26,
+                "text": "UC2: Preprocess Features (Scale & Encode)"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "cdd0a64720ee435c91d00643",
+              "_parent": {
+                "$ref": "2a5c0d9d521144d491c81324"
+              },
+              "model": {
+                "$ref": "3f5e24ff74494146ba210bab"
+              },
+              "font": "Arial;13;0",
+              "left": 320,
+              "top": 240,
+              "width": 260,
+              "height": 65,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "bbf3132a1a8a4680b1226b09",
+                "_parent": {
+                  "$ref": "cdd0a64720ee435c91d00643"
+                },
+                "model": {
+                  "$ref": "3f5e24ff74494146ba210bab"
+                },
+                "font": "Arial;13;0",
+                "left": 330,
+                "top": 255,
+                "width": 240,
+                "height": 26,
+                "text": "UC3: Detect Anomalies (Isolation Forest)"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "9b815fa8045c44caae73a4e2",
+              "_parent": {
+                "$ref": "2a5c0d9d521144d491c81324"
+              },
+              "model": {
+                "$ref": "2909266e90984f2ab23b7170"
+              },
+              "font": "Arial;13;0",
+              "left": 320,
+              "top": 330,
+              "width": 260,
+              "height": 65,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "42d5adaa4f154eec8d5604c2",
+                "_parent": {
+                  "$ref": "9b815fa8045c44caae73a4e2"
+                },
+                "model": {
+                  "$ref": "2909266e90984f2ab23b7170"
+                },
+                "font": "Arial;13;0",
+                "left": 330,
+                "top": 345,
+                "width": 240,
+                "height": 26,
+                "text": "UC4: Generate TreeSHAP Attribution"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "d64084ab1abb43eba2113087",
+              "_parent": {
+                "$ref": "2a5c0d9d521144d491c81324"
+              },
+              "model": {
+                "$ref": "a152bd90cf6e4c77b354eadb"
+              },
+              "font": "Arial;13;0",
+              "left": 320,
+              "top": 420,
+              "width": 260,
+              "height": 65,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "db59541444a341ffbff7ba27",
+                "_parent": {
+                  "$ref": "d64084ab1abb43eba2113087"
+                },
+                "model": {
+                  "$ref": "a152bd90cf6e4c77b354eadb"
+                },
+                "font": "Arial;13;0",
+                "left": 330,
+                "top": 435,
+                "width": 240,
+                "height": 26,
+                "text": "UC5: Monitor Concept Drift (KS-Test)"
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "0637520a5d304d93b795d3a7",
+              "_parent": {
+                "$ref": "2a5c0d9d521144d491c81324"
+              },
+              "model": {
+                "$ref": "cdf5bcd78bbc4a2aad0c3d6f"
+              },
+              "font": "Arial;13;0",
+              "left": 320,
+              "top": 510,
+              "width": 260,
+              "height": 65,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "3f277fa7ad9d4bc99ba28c5a",
+                "_parent": {
+                  "$ref": "0637520a5d304d93b795d3a7"
+                },
+                "model": {
+                  "$ref": "cdf5bcd78bbc4a2aad0c3d6f"
+                },
+                "font": "Arial;13;0",
+                "left": 330,
+                "top": 525,
+                "width": 240,
+                "height": 26,
+                "text": "UC6: Retrain Model (Anti-Poison Filter)"
+              }
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "04a2cadab14043fd9ae9dbf8",
+              "_parent": {
+                "$ref": "2a5c0d9d521144d491c81324"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "262d0d8733724a96bab5b370"
+              },
+              "tail": {
+                "$ref": "c556bbf7b9d24c75a994f692"
+              },
+              "lineStyle": 1,
+              "points": "140;280:320;90"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "7682524b5cd14390b60df40f",
+              "_parent": {
+                "$ref": "2a5c0d9d521144d491c81324"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "cdd0a64720ee435c91d00643"
+              },
+              "tail": {
+                "$ref": "c556bbf7b9d24c75a994f692"
+              },
+              "lineStyle": 1,
+              "points": "140;280:320;270"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "e69b534e3e6f43df847ac292",
+              "_parent": {
+                "$ref": "2a5c0d9d521144d491c81324"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "9b815fa8045c44caae73a4e2"
+              },
+              "tail": {
+                "$ref": "c556bbf7b9d24c75a994f692"
+              },
+              "lineStyle": 1,
+              "points": "140;280:320;360"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "39b07e5c155e4102b3ab8552",
+              "_parent": {
+                "$ref": "2a5c0d9d521144d491c81324"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "0637520a5d304d93b795d3a7"
+              },
+              "tail": {
+                "$ref": "c556bbf7b9d24c75a994f692"
+              },
+              "lineStyle": 1,
+              "points": "140;280:320;540"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "ec1bb93eadb844bfb7ec1f0c",
+              "_parent": {
+                "$ref": "2a5c0d9d521144d491c81324"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "262d0d8733724a96bab5b370"
+              },
+              "tail": {
+                "$ref": "b7b95dcd7cc54b549899f594"
+              },
+              "lineStyle": 1,
+              "points": "760;280:580;90"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "bc6a3cbedbf34bcf9c2dc0b2",
+              "_parent": {
+                "$ref": "2a5c0d9d521144d491c81324"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "d64084ab1abb43eba2113087"
+              },
+              "tail": {
+                "$ref": "b7b95dcd7cc54b549899f594"
+              },
+              "lineStyle": 1,
+              "points": "760;280:580;450"
+            }
+          ]
         },
         {
           "_type": "UMLClassDiagram",
-          "_id": "69cf814bc27d4eb6aee228e6",
+          "_id": "1dcb4e6838454e5dbc9653e7",
           "_parent": {
-            "$ref": "7d3a8557d40c435eb476dea9"
+            "$ref": "a1fc3383ec34470cab9c26f8"
           },
           "name": "System Architecture Diagram",
-          "ownedViews": []
-        },
-        {
-          "_type": "UMLClass",
-          "_id": "180c69b736714842a8236e08",
-          "_parent": {
-            "$ref": "7d3a8557d40c435eb476dea9"
-          },
-          "name": "NetworkTrafficSimulator",
-          "attributes": [
+          "ownedViews": [
             {
-              "_type": "UMLAttribute",
-              "_id": "3729f5d76b3446da97e6494a",
-              "name": "rng"
+              "_type": "UMLClassView",
+              "_id": "c1808ceb2a70430da13816b3",
+              "_parent": {
+                "$ref": "1dcb4e6838454e5dbc9653e7"
+              },
+              "model": {
+                "$ref": "2b0661632fc044a6a2861912"
+              },
+              "font": "Arial;13;0",
+              "left": 50,
+              "top": 80,
+              "width": 240,
+              "height": 120,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "45d459aeb7024666a431c4ff",
+                "_parent": {
+                  "$ref": "c1808ceb2a70430da13816b3"
+                },
+                "model": {
+                  "$ref": "2b0661632fc044a6a2861912"
+                },
+                "font": "Arial;13;1",
+                "left": 55,
+                "top": 85,
+                "width": 230,
+                "height": 23,
+                "text": "NetworkTrafficSimulator"
+              }
             },
             {
-              "_type": "UMLAttribute",
-              "_id": "7d4743be1c8d43908148d3ab",
-              "name": "drift_active"
+              "_type": "UMLClassView",
+              "_id": "d51f10465fda48928e844943",
+              "_parent": {
+                "$ref": "1dcb4e6838454e5dbc9653e7"
+              },
+              "model": {
+                "$ref": "49e6169c7f5e41978a756765"
+              },
+              "font": "Arial;13;0",
+              "left": 340,
+              "top": 80,
+              "width": 240,
+              "height": 120,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "427ffb4b96524e78b2e13f2a",
+                "_parent": {
+                  "$ref": "d51f10465fda48928e844943"
+                },
+                "model": {
+                  "$ref": "49e6169c7f5e41978a756765"
+                },
+                "font": "Arial;13;1",
+                "left": 345,
+                "top": 85,
+                "width": 230,
+                "height": 23,
+                "text": "NetworkPreprocessor"
+              }
             },
             {
-              "_type": "UMLAttribute",
-              "_id": "ef9bed25a88c4a4ba89c2238",
-              "name": "current_phase"
-            }
-          ],
-          "operations": [
-            {
-              "_type": "UMLOperation",
-              "_id": "757a2a53a9c74674974995e0",
-              "name": "generate_single_flow"
+              "_type": "UMLClassView",
+              "_id": "ae36329712ad4cc4a99abf31",
+              "_parent": {
+                "$ref": "1dcb4e6838454e5dbc9653e7"
+              },
+              "model": {
+                "$ref": "b6a52b16f5c647f6a7ed314e"
+              },
+              "font": "Arial;13;0",
+              "left": 630,
+              "top": 80,
+              "width": 270,
+              "height": 140,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "4f6aacd95a9d4a9bab83e6ff",
+                "_parent": {
+                  "$ref": "ae36329712ad4cc4a99abf31"
+                },
+                "model": {
+                  "$ref": "b6a52b16f5c647f6a7ed314e"
+                },
+                "font": "Arial;13;1",
+                "left": 635,
+                "top": 85,
+                "width": 260,
+                "height": 23,
+                "text": "AnomalyDetector (IsolationForest)"
+              }
             },
             {
-              "_type": "UMLOperation",
-              "_id": "6491b9729e9f4a498a8b4b57",
-              "name": "set_drift"
+              "_type": "UMLClassView",
+              "_id": "47afb5d6e6a9411d8409faa6",
+              "_parent": {
+                "$ref": "1dcb4e6838454e5dbc9653e7"
+              },
+              "model": {
+                "$ref": "81d345fa083443898881469d"
+              },
+              "font": "Arial;13;0",
+              "left": 340,
+              "top": 280,
+              "width": 240,
+              "height": 120,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "4b127b3fbb7640b9a259db8a",
+                "_parent": {
+                  "$ref": "47afb5d6e6a9411d8409faa6"
+                },
+                "model": {
+                  "$ref": "81d345fa083443898881469d"
+                },
+                "font": "Arial;13;1",
+                "left": 345,
+                "top": 285,
+                "width": 230,
+                "height": 23,
+                "text": "NetworkXAI (TreeSHAP)"
+              }
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "0808264026d04091a84989dc",
+              "_parent": {
+                "$ref": "1dcb4e6838454e5dbc9653e7"
+              },
+              "model": {
+                "$ref": "a8472004cdc14727bc6ce9ff"
+              },
+              "font": "Arial;13;0",
+              "left": 630,
+              "top": 280,
+              "width": 270,
+              "height": 140,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "364c9527aedd44178c86ac98",
+                "_parent": {
+                  "$ref": "0808264026d04091a84989dc"
+                },
+                "model": {
+                  "$ref": "a8472004cdc14727bc6ce9ff"
+                },
+                "font": "Arial;13;1",
+                "left": 635,
+                "top": 285,
+                "width": 260,
+                "height": 23,
+                "text": "ConceptDriftDetector (KS-Test)"
+              }
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "85ddae9bb1ff40e5b60d00e3",
+              "_parent": {
+                "$ref": "1dcb4e6838454e5dbc9653e7"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "d51f10465fda48928e844943"
+              },
+              "tail": {
+                "$ref": "c1808ceb2a70430da13816b3"
+              },
+              "lineStyle": 1,
+              "points": "290;140:340;140"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "95d002f7b8324f539b1ef940",
+              "_parent": {
+                "$ref": "1dcb4e6838454e5dbc9653e7"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "ae36329712ad4cc4a99abf31"
+              },
+              "tail": {
+                "$ref": "d51f10465fda48928e844943"
+              },
+              "lineStyle": 1,
+              "points": "580;140:630;140"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "784529de627f4464bd22a7b8",
+              "_parent": {
+                "$ref": "1dcb4e6838454e5dbc9653e7"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "47afb5d6e6a9411d8409faa6"
+              },
+              "tail": {
+                "$ref": "ae36329712ad4cc4a99abf31"
+              },
+              "lineStyle": 1,
+              "points": "630;180:580;320"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "c974900b97be41518e94f996",
+              "_parent": {
+                "$ref": "1dcb4e6838454e5dbc9653e7"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "0808264026d04091a84989dc"
+              },
+              "tail": {
+                "$ref": "ae36329712ad4cc4a99abf31"
+              },
+              "lineStyle": 1,
+              "points": "765;220:765;280"
             }
           ]
         },
         {
-          "_type": "UMLClass",
-          "_id": "59bb9bbc127a46328041bb92",
+          "_type": "UMLComponentDiagram",
+          "_id": "e6a5440b977742c8b6f84f44",
           "_parent": {
-            "$ref": "7d3a8557d40c435eb476dea9"
+            "$ref": "a1fc3383ec34470cab9c26f8"
           },
-          "name": "NetworkPreprocessor",
-          "attributes": [
+          "name": "Component Diagram",
+          "ownedViews": [
             {
-              "_type": "UMLAttribute",
-              "_id": "1d20d01e98304af99a666383",
-              "name": "preprocessor"
+              "_type": "UMLComponentView",
+              "_id": "89ce430c8f3749c38f354dff",
+              "_parent": {
+                "$ref": "e6a5440b977742c8b6f84f44"
+              },
+              "model": {
+                "$ref": "3ce42c8ba626469aaa5cea2a"
+              },
+              "font": "Arial;13;0",
+              "left": 60,
+              "top": 100,
+              "width": 220,
+              "height": 90,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "e8142edfc4074690b1f6b912",
+                "_parent": {
+                  "$ref": "89ce430c8f3749c38f354dff"
+                },
+                "model": {
+                  "$ref": "3ce42c8ba626469aaa5cea2a"
+                },
+                "font": "Arial;13;1",
+                "left": 85,
+                "top": 115,
+                "width": 185,
+                "height": 23,
+                "text": "DataIngestionEngine"
+              }
             },
             {
-              "_type": "UMLAttribute",
-              "_id": "b462673f78e54550ba0c9f0a",
-              "name": "feature_names"
-            }
-          ],
-          "operations": [
-            {
-              "_type": "UMLOperation",
-              "_id": "745009c3e415497986a22553",
-              "name": "fit"
+              "_type": "UMLComponentView",
+              "_id": "a328a1d3d3924385b6c65574",
+              "_parent": {
+                "$ref": "e6a5440b977742c8b6f84f44"
+              },
+              "model": {
+                "$ref": "ed8851b0b62343d695155fb6"
+              },
+              "font": "Arial;13;0",
+              "left": 350,
+              "top": 100,
+              "width": 220,
+              "height": 90,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "41f679c293fc4e2399b64708",
+                "_parent": {
+                  "$ref": "a328a1d3d3924385b6c65574"
+                },
+                "model": {
+                  "$ref": "ed8851b0b62343d695155fb6"
+                },
+                "font": "Arial;13;1",
+                "left": 375,
+                "top": 115,
+                "width": 185,
+                "height": 23,
+                "text": "AnomalyDetectionCore"
+              }
             },
             {
-              "_type": "UMLOperation",
-              "_id": "866f07385eed48d397e33ad7",
-              "name": "transform"
+              "_type": "UMLComponentView",
+              "_id": "65f1a846ed654b9dbcd7f49a",
+              "_parent": {
+                "$ref": "e6a5440b977742c8b6f84f44"
+              },
+              "model": {
+                "$ref": "e449d5db296347a3a60488a5"
+              },
+              "font": "Arial;13;0",
+              "left": 640,
+              "top": 100,
+              "width": 220,
+              "height": 90,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "73e247fa478040aaa50b248b",
+                "_parent": {
+                  "$ref": "65f1a846ed654b9dbcd7f49a"
+                },
+                "model": {
+                  "$ref": "e449d5db296347a3a60488a5"
+                },
+                "font": "Arial;13;1",
+                "left": 665,
+                "top": 115,
+                "width": 185,
+                "height": 23,
+                "text": "TreeSHAPExplanationModule"
+              }
+            },
+            {
+              "_type": "UMLComponentView",
+              "_id": "7f65c8581776448eb69342f0",
+              "_parent": {
+                "$ref": "e6a5440b977742c8b6f84f44"
+              },
+              "model": {
+                "$ref": "7ce6b8a7040647e2b8995acc"
+              },
+              "font": "Arial;13;0",
+              "left": 350,
+              "top": 260,
+              "width": 220,
+              "height": 90,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "664b8d9508a2458681d1082e",
+                "_parent": {
+                  "$ref": "7f65c8581776448eb69342f0"
+                },
+                "model": {
+                  "$ref": "7ce6b8a7040647e2b8995acc"
+                },
+                "font": "Arial;13;1",
+                "left": 375,
+                "top": 275,
+                "width": 185,
+                "height": 23,
+                "text": "DriftAdaptationController"
+              }
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "fdef5706de9d4707a38d9bd5",
+              "_parent": {
+                "$ref": "e6a5440b977742c8b6f84f44"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "a328a1d3d3924385b6c65574"
+              },
+              "tail": {
+                "$ref": "89ce430c8f3749c38f354dff"
+              },
+              "lineStyle": 1,
+              "points": "280;145:350;145"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "3e0d48497bf0487ca5756c17",
+              "_parent": {
+                "$ref": "e6a5440b977742c8b6f84f44"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "65f1a846ed654b9dbcd7f49a"
+              },
+              "tail": {
+                "$ref": "a328a1d3d3924385b6c65574"
+              },
+              "lineStyle": 1,
+              "points": "570;145:640;145"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "48d673f8e32f4744be5ccca6",
+              "_parent": {
+                "$ref": "e6a5440b977742c8b6f84f44"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "7f65c8581776448eb69342f0"
+              },
+              "tail": {
+                "$ref": "a328a1d3d3924385b6c65574"
+              },
+              "lineStyle": 1,
+              "points": "460;190:460;260"
             }
           ]
         },
         {
-          "_type": "UMLClass",
-          "_id": "cdceb7d722d6400ab5c76a6f",
+          "_type": "UMLActivityDiagram",
+          "_id": "343e0c64ea8341d5b68e26f8",
           "_parent": {
-            "$ref": "7d3a8557d40c435eb476dea9"
+            "$ref": "a1fc3383ec34470cab9c26f8"
           },
-          "name": "AnomalyDetector",
-          "attributes": [
+          "name": "Activity Diagram",
+          "ownedViews": [
             {
-              "_type": "UMLAttribute",
-              "_id": "1cf0638e7d0e433bbc336d1e",
-              "name": "model: IsolationForest"
+              "_type": "UMLActionView",
+              "_id": "35a6cc015077414990f58832",
+              "_parent": {
+                "$ref": "343e0c64ea8341d5b68e26f8"
+              },
+              "model": {
+                "$ref": "344817524ffc449eab4aca29"
+              },
+              "font": "Arial;13;0",
+              "left": 320,
+              "top": 50,
+              "width": 230,
+              "height": 55,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "f3653d8f850845bca9cbd5e1",
+                "_parent": {
+                  "$ref": "35a6cc015077414990f58832"
+                },
+                "model": {
+                  "$ref": "344817524ffc449eab4aca29"
+                },
+                "font": "Arial;13;0",
+                "left": 330,
+                "top": 65,
+                "width": 210,
+                "height": 23,
+                "text": "Ingest & Normalize Packet"
+              }
             },
             {
-              "_type": "UMLAttribute",
-              "_id": "4a2eb6fa8ab6415ebe307fa5",
-              "name": "threshold: float"
-            }
-          ],
-          "operations": [
-            {
-              "_type": "UMLOperation",
-              "_id": "56bcefa4751b4fa2bfb03141",
-              "name": "fit"
+              "_type": "UMLActionView",
+              "_id": "34cb089acf4e48feaf4902fc",
+              "_parent": {
+                "$ref": "343e0c64ea8341d5b68e26f8"
+              },
+              "model": {
+                "$ref": "555e9c705fbf4c24abef014c"
+              },
+              "font": "Arial;13;0",
+              "left": 320,
+              "top": 150,
+              "width": 230,
+              "height": 55,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "8ccf003c21cd4b53b4956f6a",
+                "_parent": {
+                  "$ref": "34cb089acf4e48feaf4902fc"
+                },
+                "model": {
+                  "$ref": "555e9c705fbf4c24abef014c"
+                },
+                "font": "Arial;13;0",
+                "left": 330,
+                "top": 165,
+                "width": 210,
+                "height": 23,
+                "text": "Score with Isolation Forest"
+              }
             },
             {
-              "_type": "UMLOperation",
-              "_id": "a8579bf95710446d92fc30f8",
-              "name": "predict"
+              "_type": "UMLActionView",
+              "_id": "0e4009f0fc9a4a688c93f545",
+              "_parent": {
+                "$ref": "343e0c64ea8341d5b68e26f8"
+              },
+              "model": {
+                "$ref": "42588940d43b4f15b289d52e"
+              },
+              "font": "Arial;13;0",
+              "left": 520,
+              "top": 260,
+              "width": 230,
+              "height": 55,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "d66c7674924d420c81caa609",
+                "_parent": {
+                  "$ref": "0e4009f0fc9a4a688c93f545"
+                },
+                "model": {
+                  "$ref": "42588940d43b4f15b289d52e"
+                },
+                "font": "Arial;13;0",
+                "left": 530,
+                "top": 275,
+                "width": 210,
+                "height": 23,
+                "text": "Generate SHAP Waterfall Plot"
+              }
             },
             {
-              "_type": "UMLOperation",
-              "_id": "ca315f62c9e54b0781dba648",
-              "name": "get_anomaly_score"
+              "_type": "UMLActionView",
+              "_id": "9f1c1a0b6d524698a728dc4d",
+              "_parent": {
+                "$ref": "343e0c64ea8341d5b68e26f8"
+              },
+              "model": {
+                "$ref": "ea3d68d900ab4ed1a3f0bb7b"
+              },
+              "font": "Arial;13;0",
+              "left": 120,
+              "top": 260,
+              "width": 230,
+              "height": 55,
+              "nameCompartment": {
+                "_type": "UMLNameCompartmentView",
+                "_id": "a1e96cd658894d9aafcd274c",
+                "_parent": {
+                  "$ref": "9f1c1a0b6d524698a728dc4d"
+                },
+                "model": {
+                  "$ref": "ea3d68d900ab4ed1a3f0bb7b"
+                },
+                "font": "Arial;13;0",
+                "left": 130,
+                "top": 275,
+                "width": 210,
+                "height": 23,
+                "text": "Update FIFO Drift Buffer (KS-Test)"
+              }
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "fa6d0ba11e97444680cbf2fe",
+              "_parent": {
+                "$ref": "343e0c64ea8341d5b68e26f8"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "34cb089acf4e48feaf4902fc"
+              },
+              "tail": {
+                "$ref": "35a6cc015077414990f58832"
+              },
+              "lineStyle": 1,
+              "points": "435;105:435;150"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "27833739b9644f26beebd655",
+              "_parent": {
+                "$ref": "343e0c64ea8341d5b68e26f8"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "0e4009f0fc9a4a688c93f545"
+              },
+              "tail": {
+                "$ref": "34cb089acf4e48feaf4902fc"
+              },
+              "lineStyle": 1,
+              "points": "470;205:550;260"
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "8f825f71d2094be0823cdf90",
+              "_parent": {
+                "$ref": "343e0c64ea8341d5b68e26f8"
+              },
+              "font": "Arial;13;0",
+              "head": {
+                "$ref": "9f1c1a0b6d524698a728dc4d"
+              },
+              "tail": {
+                "$ref": "34cb089acf4e48feaf4902fc"
+              },
+              "lineStyle": 1,
+              "points": "400;205:280;260"
             }
           ]
         },
         {
-          "_type": "UMLClass",
-          "_id": "48cb1e15a02747158ad30b91",
-          "_parent": {
-            "$ref": "7d3a8557d40c435eb476dea9"
-          },
-          "name": "NetworkXAI",
-          "attributes": [
-            {
-              "_type": "UMLAttribute",
-              "_id": "2b4577be1f2a4440bd7d8dcd",
-              "name": "explainer: TreeExplainer"
-            }
-          ],
-          "operations": [
-            {
-              "_type": "UMLOperation",
-              "_id": "027ecab6d9914a5d95b71c8c",
-              "name": "explain_instance"
-            }
-          ]
+          "_type": "UMLActor",
+          "_id": "fe67ac4436c64facb06fcdc1",
+          "name": "Security Analyst"
+        },
+        {
+          "_type": "UMLActor",
+          "_id": "7404c83d6611455f899c1de2",
+          "name": "Network Gateway"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "dffb151063904f0e9094c534",
+          "name": "UC1: Ingest Streaming NetFlow Packets"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "8ed5dbb057014a2caf3f32ee",
+          "name": "UC2: Preprocess Features (Scale & Encode)"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "3f5e24ff74494146ba210bab",
+          "name": "UC3: Detect Anomalies (Isolation Forest)"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "2909266e90984f2ab23b7170",
+          "name": "UC4: Generate TreeSHAP Attribution"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "a152bd90cf6e4c77b354eadb",
+          "name": "UC5: Monitor Concept Drift (KS-Test)"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "cdf5bcd78bbc4a2aad0c3d6f",
+          "name": "UC6: Retrain Model (Anti-Poison Filter)"
         },
         {
           "_type": "UMLClass",
-          "_id": "133b65f2f448472887091af0",
-          "_parent": {
-            "$ref": "7d3a8557d40c435eb476dea9"
-          },
-          "name": "ConceptDriftDetector",
-          "attributes": [
-            {
-              "_type": "UMLAttribute",
-              "_id": "5cae645872b646fabfe2b6b3",
-              "name": "window_size: int"
-            },
-            {
-              "_type": "UMLAttribute",
-              "_id": "96835eb30d5f45449499047f",
-              "name": "alpha: float"
-            },
-            {
-              "_type": "UMLAttribute",
-              "_id": "5acbb513bf6a4b9491f58fcc",
-              "name": "last_drift_record: int"
-            }
-          ],
-          "operations": [
-            {
-              "_type": "UMLOperation",
-              "_id": "234f2163921c4dfab8fb1360",
-              "name": "update"
-            },
-            {
-              "_type": "UMLOperation",
-              "_id": "e7e956a887d34f538decc071",
-              "name": "reset_reference"
-            }
-          ]
+          "_id": "2b0661632fc044a6a2861912",
+          "name": "NetworkTrafficSimulator"
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "49e6169c7f5e41978a756765",
+          "name": "NetworkPreprocessor"
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "b6a52b16f5c647f6a7ed314e",
+          "name": "AnomalyDetector"
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "81d345fa083443898881469d",
+          "name": "NetworkXAI"
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "a8472004cdc14727bc6ce9ff",
+          "name": "ConceptDriftDetector"
+        },
+        {
+          "_type": "UMLComponent",
+          "_id": "3ce42c8ba626469aaa5cea2a",
+          "name": "DataIngestionEngine"
+        },
+        {
+          "_type": "UMLComponent",
+          "_id": "ed8851b0b62343d695155fb6",
+          "name": "AnomalyDetectionCore"
+        },
+        {
+          "_type": "UMLComponent",
+          "_id": "e449d5db296347a3a60488a5",
+          "name": "TreeSHAPExplanationModule"
+        },
+        {
+          "_type": "UMLComponent",
+          "_id": "7ce6b8a7040647e2b8995acc",
+          "name": "DriftAdaptationController"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "344817524ffc449eab4aca29",
+          "name": "Ingest & Normalize Packet"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "555e9c705fbf4c24abef014c",
+          "name": "Score with Isolation Forest"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "42588940d43b4f15b289d52e",
+          "name": "Generate SHAP Waterfall Plot"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "ea3d68d900ab4ed1a3f0bb7b",
+          "name": "Update FIFO Drift Buffer (KS-Test)"
         }
       ]
     }
