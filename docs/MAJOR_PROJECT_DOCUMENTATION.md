@@ -135,105 +135,93 @@ The primary objective of this project is to develop, validate, and deploy an aut
 
 # CHAPTER 2: LITERATURE REVIEW
 
-This chapter presents an in-depth review of existing research literature and foundational methodologies in Network Intrusion Detection Systems (NIDS). The analysis is structured around peer-reviewed studies covering unsupervised deep learning, supervised ensemble classification, explainable artificial intelligence (XAI), concept drift adaptation, and adversarial poisoning defense.
+This chapter reviews the foundational research papers that motivate and frame this project. The review directly expands upon the four key benchmark papers presented in the project defense, structured according to the institutional documentation guidelines with dedicated sections for Introduction, Merits, Demerits, and Research Challenges.
 
 ---
 
-### 2.1 Existing Method 1: Deep Autoencoder Ensemble for Online Network Intrusion Detection
+### 2.1 UNSW-NB15 Benchmark and Supervised Flow Classifiers (Moustafa et al., 2015)
 
-#### 2.1.1 Introduction & Research Survey
-- **Reference Paper**: *Mirsky, Y., Doitshman, T., Elovici, Y., & Shabtai, A. (2018). "Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection." Network and Distributed System Security Symposium (NDSS 2018).*
-- **Focus Area**: Unsupervised anomaly detection on streaming network packets.
-- **Methodology & Core Contribution**: Mirsky et al. introduced *Kitsune* (and its core algorithm *KitNET*), an unsupervised intrusion detection framework designed to run efficiently on resource-constrained network hardware. The architecture employs an ensemble of miniature autoencoders where an input feature vector $X \in \mathbb{R}^d$ is partitioned across multiple local autoencoders via a correlation-based feature mapper. Each autoencoder compresses its assigned subset of features into a low-dimensional bottleneck and reconstructs it. The root mean squared error (RMSE) of reconstruction across the ensemble serves as the anomaly score:
-$$\text{RMSE}(X, \hat{X}) = \sqrt{\frac{1}{d} \sum_{i=1}^d (x_i - \hat{x}_i)^2}$$
-Flows exceeding a statistically calibrated threshold are classified as malicious without requiring historical attack labels.
+#### 2.1.1 Introduction
+- **Paper Citation**: Moustafa, N., & Slay, J. (2015). *"UNSW-NB15: A Comprehensive Data Set for Network Intrusion Detection Systems."* In *Military Communications and Information Systems Conference (MilCIS)*, IEEE, pp. 1–6. [doi:10.1109/MilCIS.2015.7348942](https://doi.org/10.1109/MilCIS.2015.7348942)
+- **Main Idea & Core Contribution**: Moustafa and Slay established the benchmark **UNSW-NB15** dataset to replace outdated legacy datasets (e.g., KDD-Cup99) with realistic modern network traffic. Using the IXIA PerfectStorm tool, they generated a hybrid synthesis of real enterprise background activity combined with contemporary synthetic attack vectors across nine threat families (Fuzzers, Analysis, Backdoors, DoS, Exploits, Generic, Reconnaissance, Shellcode, and Worms). The authors evaluated traditional supervised machine learning algorithms—including Naive Bayes (NB), Decision Trees (DT), and Logistic Regression—on static flow partitions to establish baseline detection rates on packet metadata.
 
 #### 2.1.2 Merits, Demerits and Challenges
 - **Merits**:
-  - *Zero-Day Detection*: By training strictly on normal traffic distributions, the model effectively isolates novel, previously unobserved network exploits.
-  - *Lightweight Processing*: Dividing high-dimensional inputs across small, independent autoencoders significantly lowers memory overhead compared to monolithic deep neural networks.
+  - *Modern Network Realism*: Emulates realistic L3/L4 NetFlow and IPFIX telemetry, capturing multi-protocol behaviors across diverse service vectors.
+  - *Comprehensive Baseline*: Provides standard ground-truth benchmark metrics across multi-class attack categories for academic evaluation.
 - **Demerits**:
-  - *The Black-Box Dilemma*: While Kitsune successfully flags anomalous packets, it outputs only a scalar reconstruction error. It cannot provide root-cause explanations explaining *which* specific network features (e.g., source port frequency, packet size, TCP window size) drove the anomaly.
-  - *High Cumulative Latency*: Forward passes across multiple autoencoder neural layers still incur latency overheads between 40 ms and 120 ms under heavy burst traffic, creating potential packet drop risks on 10 Gbps backbones.
-- **Research Gap & Challenges**:
-  - Autoencoders lack adaptive thresholding mechanisms; gradual, benign traffic shifts cause reconstruction error creep, leading to high false alarm rates. Furthermore, if adversarial traffic is present during online parameter updates, autoencoders inadvertently absorb malicious patterns into their latent weights.
+  - *Dependency on Ground-Truth Labels*: The studied classifiers require fully labeled training sets, making them incapable of functioning in unsupervised live deployment.
+  - *Zero-Day Blindness*: Supervised models trained on historical splits fail catastrophically when exposed to novel zero-day attack variations not present in the labeled training distribution.
+- **Challenges & Research Gap**:
+  - The research focuses strictly on static, offline dataset evaluations. It does not address real-time streaming ingestion, online threshold calibration, or performance degradation under statistical distribution shifts.
 
 ---
 
-### 2.2 Existing Method 2: Supervised Random Forest & XGBoost Ensemble Classifiers
+### 2.2 Explainable Machine Learning for Intrusion Detection (Wang et al., 2020)
 
-#### 2.2.1 Introduction & Research Survey
-- **Reference Paper**: *Sarhan, M., Layeghy, S., Moustafa, N., & Portmann, M. (2021). "NetFlow Datasets for Machine Learning-Based Network Intrusion Detection Systems." IEEE Big Data / IEEE Access, 9, 112345–112358.*
-- **Focus Area**: Supervised multi-class classification on standardized NetFlow and IPFIX telemetry.
-- **Methodology & Core Contribution**: Sarhan et al. conducted an extensive benchmark of tabular machine learning models—specifically Random Forest (RF), XGBoost, and Decision Trees—evaluated across modern NetFlow feature representations extracted from the UNSW-NB15 and CIC-IDS2017 datasets. The supervised ensemble aggregates $B$ deterministic decision trees $\{T_b\}_{b=1}^B$, utilizing split criteria based on Gini impurity or Information Gain to assign packets into discrete threat categories (e.g., DoS, Exploits, Generic, Reconnaissance):
-$$\hat{y} = \text{argmax}_c \frac{1}{B} \sum_{b=1}^B \mathbb{I}(T_b(X) = c)$$
+#### 2.2.1 Introduction
+- **Paper Citation**: Wang, M., Zheng, K., Yang, Y., & Wang, X. (2020). *"An Explainable Machine Learning Framework for Network Intrusion Detection Systems."* In *IEEE Access*, vol. 8, pp. 73127–73141. [doi:10.1109/ACCESS.2020.2988359](https://doi.org/10.1109/ACCESS.2020.2988359)
+- **Main Idea & Core Contribution**: Wang et al. addressed the "black-box paradox" in cybersecurity by developing a post-hoc explainability framework for NIDS. The authors coupled complex supervised classifiers (Random Forest, Extra Trees, Support Vector Machines) with post-hoc interpretability models—primarily SHapley Additive exPlanations (SHAP) and Local Interpretable Model-agnostic Explanations (LIME). The system computes local feature importance values to reveal which packet attributes (e.g., source bytes, duration, packet counts) drove the classifier to flag an intrusion.
 
 #### 2.2.2 Merits, Demerits and Challenges
 - **Merits**:
-  - *High Precision on Known Attacks*: On closed-world test splits with established attack distributions, supervised ensembles consistently achieve classification accuracy exceeding 95%–98%.
-  - *Fast CPU Evaluation*: Tree traversal relies on scalar comparisons ($x_j \leq \theta$), permitting rapid sub-millisecond execution on standard server processors.
+  - *Interpretability & Trust*: Bridges the operational divide between mathematical classifiers and human security analysts by producing transparent feature attribution rankings.
+  - *Model-Agnostic Flexibility*: The theoretical framework can be applied post-hoc to evaluate diverse underlying classifier architectures.
 - **Demerits**:
-  - *Catastrophic Zero-Day Blindness*: Supervised models assume that all future attacks follow the statistical distributions of the training set. When confronted with a novel attack vector or modified payload, the model misclassifies the malicious flow into the nearest known benign class.
-  - *Severe Class Imbalance Sensitivity*: Benign network flows naturally outnumber intrusion attempts by ratios exceeding 10,000:1. Standard supervised learning exhibits extreme majority-class bias, collapsing recall on rare, critical cyberattack events.
-- **Research Gap & Challenges**:
-  - Supervised systems cannot autonomously self-heal or adapt in production because continuous supervised retraining requires manual, forensic packet labeling, which is unfeasible in real-time SOC environments.
+  - *High Post-Hoc Latency*: Computing KernelSHAP or LIME permutations across high-dimensional feature spaces is computationally expensive, requiring seconds or minutes per batch.
+  - *Lack of Streaming Integration*: The system was evaluated post-mortem on static test sets rather than during active, low-latency packet streaming.
+- **Challenges & Research Gap**:
+  - The framework does not run inline with live network streams (where latency must remain $<100$ ms) and outputs raw numerical feature importance tables without contextual, plain-English incident summaries.
 
 ---
 
-### 2.3 Existing Method 3: Explainable AI (XAI) Frameworks for Intrusion Detection
+### 2.3 Concept Drift Adaptation in Streaming Network Environments (Lu et al., 2019)
 
-#### 2.3.1 Introduction & Research Survey
-- **Reference Paper**: *Mahbooba, M., Timilsina, M., Serrano, R., & Ray, R. (2021). "Explainable Artificial Intelligence (XAI) in Cybersecurity: A Survey and Framework for Network Intrusion Detection." Applied Sciences / IEEE Access.* (Incorporating *Lundberg et al., 2020, Nature Machine Intelligence*).
-- **Focus Area**: Model interpretability, post-hoc explanations, and trust verification in algorithmic threat classification.
-- **Methodology & Core Contribution**: Mahbooba et al. investigated the integration of game-theoretic attribution techniques—specifically SHapley Additive exPlanations (SHAP) and Local Interpretable Model-agnostic Explanations (LIME)—to interpret complex intrusion detection models. Built on cooperative game theory, TreeSHAP computes the exact marginal contribution $\phi_i$ of each feature $i$ across all possible feature subsets $S \subseteq F \setminus \{i\}$:
-$$\phi_i(x) = \sum_{S \subseteq F \setminus \{i\}} \frac{|S|!(|F| - |S| - 1)!}{|F|!} \left[ f_x(S \cup \{i\}) - f_x(S) \right]$$
-This formulation satisfies the mathematical axioms of Efficiency, Symmetry, Dummy, and Additivity, translating opaque mathematical decisions into rank-ordered feature importance breakdowns.
+#### 2.3.1 Introduction
+- **Paper Citation**: Lu, J., Liu, A., Dong, F., Gu, F., Gama, J., & Zhang, G. (2019). *"Learning Under Concept Drift: A Review."* In *IEEE Transactions on Knowledge and Data Engineering (TKDE)*, vol. 31, no. 12, pp. 2346–2363. [doi:10.1109/TKDE.2018.2876857](https://doi.org/10.1109/TKDE.2018.2876857)
+- **Main Idea & Core Contribution**: Lu et al. conducted a comprehensive survey on learning in non-stationary streaming environments, establishing a formalized taxonomy of concept drift (sudden, gradual, incremental, and reoccurring). The authors reviewed statistical test methodologies (e.g., Kolmogorov-Smirnov test, Page-Hinkley, and ADWIN) designed to monitor streaming window buffers, identify significant distribution shifts in $P(X)$, and autonomously trigger model updates to prevent accuracy degradation over time.
 
 #### 2.3.2 Merits, Demerits and Challenges
 - **Merits**:
-  - *Granular Local Explanations*: Pinpoints the exact features (e.g., elevated `sload`, abnormal `spkts`, anomalous `sttl`) that drove a specific alert, drastically reducing forensic triage time for SOC analysts.
-  - *Mathematical Consistency*: Unlike heuristic attribution methods, Shapley values guarantee that feature attributions sum up to the difference between the model's raw score and the expected baseline score.
+  - *Unsupervised Statistical Rigor*: Formulates distribution-free hypothesis tests capable of detecting real-world shifts without requiring continuous external ground-truth labels.
+  - *Dynamic Adaptation*: Establishes mathematical triggers to retrain or update machine learning models as baseline traffic profiles evolve.
 - **Demerits**:
-  - *High Computational Overhead*: Model-agnostic KernelSHAP and brute-force permutation algorithms scale exponentially ($\mathcal{O}(2^{|F|})$), causing severe bottlenecks that prevent real-time streaming deployment.
-  - *Lack of Actionable Translation*: Standard XAI tools output raw numerical floating-point vectors or static charts, leaving analysts without contextual, plain-English incident summaries.
-- **Research Gap & Challenges**:
-  - Prior research has focused almost entirely on *offline* explanation of static test datasets. There is a critical lack of operational systems that optimize tree-based SHAP algorithms to run in real time ($\leq 100$ ms) alongside online streaming anomaly detectors.
+  - *False Trigger Vulnerability*: Standard two-sample statistical tests often trigger false drift alarms under transient, benign traffic bursts (e.g., scheduled file backups).
+  - *Adversarial Poisoning Vulnerability*: Retraining models naively on recent streaming data creates a critical attack surface: stealthy, low-rate malicious traffic is absorbed into the new baseline.
+- **Challenges & Research Gap**:
+  - Existing concept drift surveys lack an integrated **anti-poisoning filtering mechanism** that ensures newly retrained models learn exclusively from verified legitimate flows during active cyber intrusions.
 
 ---
 
-### 2.4 Existing Method 4: Concept Drift Detection & Statistical Stream Monitoring
+### 2.4 Isolation-Based Anomaly Detection for Streaming Data (Liu et al., 2012)
 
-#### 2.4.1 Introduction & Research Survey
-- **Reference Paper**: *Lu, J., Liu, A., Dong, F., Gu, F., Gama, J., & Zhang, G. (2018). "Learning Under Concept Drift: A Review." IEEE Transactions on Knowledge and Data Engineering (TKDE), 31(12), 2346–2363.*
-- **Focus Area**: Adaptive machine learning in non-stationary data streams and statistical covariate shift detection.
-- **Methodology & Core Contribution**: Lu et al. developed an extensive taxonomy of concept drift mechanisms in real-time streams, distinguishing between sudden drift, gradual drift, and recurring seasonality. In network environments where ground-truth labels are absent in real time, unsupervised drift detection relies on distribution discrepancy testing between a historical reference window $\mathcal{W}_{\text{ref}}$ and a sliding operational window $\mathcal{W}_{\text{curr}}$. A primary statistical tool is the two-sample Kolmogorov-Smirnov (KS) test, which measures the maximum vertical distance between empirical cumulative distribution functions (ECDFs):
-$$D = \sup_x |F_{\text{ref}}(x) - F_{\text{curr}}(x)|$$
-When the calculated $p$-value falls below a pre-set significance threshold $\alpha$, a distribution shift is detected.
+#### 2.4.1 Introduction
+- **Paper Citation**: Liu, F. T., Ting, K. M., & Zhou, Z.-H. (2012). *"Isolation-Based Anomaly Detection."* In *ACM Transactions on Knowledge Discovery from Data (TKDD)*, vol. 6, no. 1, pp. 1–39. [doi:10.1145/2133360.2133363](https://doi.org/10.1145/2133360.2133363)
+- **Main Idea & Core Contribution**: Liu et al. introduced the foundational **Isolation Forest (iForest)** algorithm, which fundamentally departs from distance-based and density-based anomaly detection models. Rather than profiling normal points to discover outliers, iForest exploits two quantitative properties of anomalies: they are "few and different." By constructing an ensemble of completely random binary partition trees (*iTrees*), anomalous instances are isolated near the root of the tree with short average path lengths $h(x)$, yielding linear time complexity $\mathcal{O}(n \log n)$ and ultra-fast inference speeds.
 
 #### 2.4.2 Merits, Demerits and Challenges
 - **Merits**:
-  - *Completely Label-Free*: Monitors changes in network feature distributions ($P(X)$) directly without requiring immediate threat verification or manual analyst intervention.
-  - *Non-Parametric Rigor*: Does not force artificial Gaussian assumptions onto network metrics, making it well-suited for heavy-tailed telemetry.
+  - *Ultra-Low Computational Latency*: Evaluates tree depth in sub-millisecond execution times, making it uniquely suited for high-throughput streaming network traffic.
+  - *100% Unsupervised*: Operates effectively without ground-truth attack labels, making it ideal for zero-day threat discovery.
 - **Demerits**:
-  - *False Alarm Vulnerability*: Standard univariate KS-tests suffer from high false alarm rates under multi-feature testing due to the multiple comparisons problem.
-  - *Transient Spike Sensitivity*: Without temporal smoothing, temporary benign traffic spikes (e.g., an automated daily backup) can trigger unnecessary and disruptive model retraining cycles.
-- **Research Gap & Challenges**:
-  - Existing concept drift frameworks detect *that* a shift has occurred, but do not provide an integrated, automated defense against **data poisoning**. If a concept drift detector triggers retraining while a multi-stage cyber attack is underway, the model will absorb the attack vectors into its new baseline, blinding the system to the ongoing intrusion.
+  - *Black-Box Randomness*: Standard Isolation Forest outputs only a scalar path length or continuous anomaly score; it cannot explain which features caused the early isolation.
+  - *Static Thresholding*: Standard implementations rely on rigid, fixed contamination factors ($\approx 0.01\text{--}0.10$), which trigger false alarms when ambient network volatility shifts.
+- **Challenges & Research Gap**:
+  - Standard iForest lacks native explainability and cannot dynamically adjust its anomaly threshold or self-heal under concept drift without external pipeline integration.
 
 ---
 
-### 2.5 Comparative Analysis of Existing Literature vs. Proposed Work
+### 2.5 Summary Table: Comparison of the 4 Foundational Papers vs. Proposed Work
 
-Table 2.1 provides a structured, comparative analysis benchmarking the referenced research literature against the **Proposed Autonomous Real-Time XAI Intrusion Detection System**.
+Table 2.1 summarizes the four foundational research papers from the presentation, highlighting their core methodology, main findings, identified research gaps, and how the **Proposed System** resolves them.
 
-| Research Work / Literature Reference | Core Methodology / Technique | Key Advantages & Merits | Critical Limitations & Research Gaps | How the Proposed System Solves It |
-| :--- | :--- | :--- | :--- | :--- |
-| **Mirsky et al. (2018)**<br>*Kitsune: Ensemble of Autoencoders (NDSS)* | Ensemble of miniature autoencoders (KitNET) monitoring feature subsets | Unsupervised, detects zero-day exploits, low memory footprint | High latency ($>50\text{--}120$ ms), completely black-box (no explanation), vulnerable to baseline creep | Uses **Isolation Forest ($<2$ ms latency)** coupled with **TreeSHAP local attribution** for full explainability |
-| **Sarhan et al. (2021)**<br>*NetFlow Datasets for ML NIDS (IEEE Big Data)* | Supervised tree classifiers (Random Forest, XGBoost) on NetFlow features | $>95\%$ accuracy on known attack signatures, sub-millisecond tabular evaluation | Completely blind to zero-day attacks, severe class imbalance penalty, requires manual labeling | Implements **unsupervised Isolation Forest** with **dynamic 99th percentile thresholding**; zero dependency on attack labels |
-| **Mahbooba et al. (2021)**<br>*XAI Framework for NIDS (Applied Sciences)* | Post-hoc SHAP and LIME applied to offline intrusion models | Transparent feature ranking, bridges algorithm decisions to human comprehension | High compute latency ($\mathcal{O}(2^{|F|})$), offline-only evaluation, outputs raw numbers without NLP | Integrates **optimized TreeExplainer (~95 ms)** and an automated **Natural Language Summary Synthesizer** |
-| **Lu et al. (2018)**<br>*Learning Under Concept Drift (IEEE TKDE)* | Statistical distribution hypothesis testing across sliding stream buffers | Label-free detection of non-stationary traffic shifts, non-parametric validity | High false trigger rate under multiple testing; vulnerable to adversarial buffer poisoning | Applies **Bonferroni multi-hypothesis correction ($\alpha=0.002$)** combined with an **anti-poisoning clean-flow filter** |
-| **Kloft & Laskov (2012)**<br>*Security Analysis Under Poisoning Attacks (JMLR)* | Mathematical modeling of online anomaly centroid shifts under attack | Quantifies evasion bounds and poisoning risks in online learning | Classical centroid defenses degrade under high-dimensional multi-modal distributions | Enforces strict **dual-layer isolation**: only verified benign flows (`pred_anomaly == 0`) enter the retraining buffer |
-| **PROPOSED SYSTEM (2026)**<br>*Autonomous Real-Time Network Anomaly Detection* | **Isolation Forest + TreeSHAP + Bonferroni KS-Test + Clean Retrain Buffer** | **Sub-2ms inference, ~95ms exact XAI, autonomous self-healing, zero-poisoning risk, 92.4% accuracy on UNSW-NB15** | Requires cold-start baseline calibration window ($N=250$ packets); focuses on NetFlow L3/L4 metadata | **Production-ready, closed-loop, explainable, and poison-resilient autonomous cyber defense platform** |
+| Author & Year | Research Paper Title | Core Methodology | Main Findings & Merits | Limitation / Research Gap | How the Proposed System Solves It |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Moustafa & Slay (2015)** | *UNSW-NB15: A Comprehensive Data Set for Network Intrusion Detection Systems* | Supervised ML classification (Decision Trees, Naive Bayes, Logistic Regression) | Established realistic modern NetFlow/IPFIX benchmark telemetry across 9 attack families | Requires ground-truth attack labels; completely blind to novel zero-day exploits | Employs an **unsupervised Isolation Forest** requiring only normal baseline traffic |
+| **Wang et al. (2020)** | *An Explainable Machine Learning Framework for Network Intrusion Detection Systems* | Post-hoc SHAP and LIME applied to supervised classifiers | Provides feature importance rankings, making intrusion decisions transparent | Lacks real-time streaming integration; computed post-mortem on static data ($\mathcal{O}(2^{\|F\|})$) | Integrates **optimized TreeSHAP (~95 ms)** inline with streaming anomaly scoring |
+| **Lu et al. (2019)** | *Learning Under Concept Drift: A Review of Methods and Applications* | Statistical distribution discrepancy testing (KS-tests, ADWIN) across sliding windows | Detects non-stationary distribution shifts in streaming data without labels | Lacks anti-poisoning defenses; active attack packets poison the retraining buffer | Introduces an **anti-poisoning clean buffer filter (`pred_anomaly == 0`)** with Bonferroni correction |
+| **Liu et al. (2012)** | *Isolation-Based Anomaly Detection* | Ensemble of random partition binary trees (Isolation Forest) | Ultra-fast $\mathcal{O}(n \log n)$ training and sub-millisecond path length evaluation | Operates as a black box; relies on fixed static anomaly thresholds | Couples iForest with **TreeSHAP local attributions** and **dynamic 99th percentile boundaries** |
+| **PROPOSED SYSTEM (2026)** | ***Autonomous Real-Time Network Anomaly Detection with XAI & Adaptive Retraining*** | **Coupled streaming pipeline: Unsupervised iForest + TreeSHAP Waterfall + Bonferroni KS-Test + Clean Retrain Buffer** | **High-speed inference ($<2$ ms), exact Shapley explainability (~95 ms), verified self-healing adaptation** | Requires initial calibration baseline window ($N=250$); operates on flow metadata | **Delivers a production-ready, explainable, self-healing, and poison-resilient autonomous cyber defense platform** |
 
 ---
 
